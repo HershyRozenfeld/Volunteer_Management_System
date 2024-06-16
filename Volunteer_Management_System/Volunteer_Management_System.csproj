@@ -73,6 +73,7 @@
     <Compile Include="App_Code\BLL\Category.cs" />
     <Compile Include="App_Code\BLL\Availability.cs" />
     <Compile Include="App_Code\BLL\City.cs" />
+    <Compile Include="App_Code\BLL\Registr.cs" />
     <Compile Include="App_Code\BLL\TaskHours.cs" />
     <Compile Include="App_Code\BLL\User.cs" />
     <Compile Include="App_Code\BLL\Activitie.cs" />
