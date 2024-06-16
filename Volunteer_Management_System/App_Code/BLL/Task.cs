@@ -10,10 +10,14 @@ namespace BLL
         public int TID { get; set; }
         public string TDescription { get; set; }
         public string TName { get; set; }
-        public string AssignedTo { get; set; }
-        
-        
-
-
+        public string InCharge { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public DateTime Data { get; set; }
+        public DateTime BeginningTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public int Status { get; set; }
+        public string Remark { get; set; }
+        public string Address { get; set; }
     }
 }
