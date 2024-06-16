@@ -70,7 +70,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\BLL\Volunteer.cs" />
+    <Compile Include="App_Code\BLL\Category.cs" />
+    <Compile Include="App_Code\BLL\Availability.cs" />
+    <Compile Include="App_Code\BLL\City.cs" />
+    <Compile Include="App_Code\BLL\TaskHours.cs" />
+    <Compile Include="App_Code\BLL\User.cs" />
     <Compile Include="App_Code\BLL\Activitie.cs" />
     <Compile Include="App_Code\BLL\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

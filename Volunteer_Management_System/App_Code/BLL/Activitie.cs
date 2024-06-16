@@ -12,11 +12,11 @@ namespace BLL
         public string ADescription { get; set; }
         public DateTime StartDT { get; set; }
         public DateTime EndDT { get; set; }
-        public string Location { get; set; }
-        public string GuarantorID { get; set; }
+        public int City { get; set; }
+        public string GuarantorName { get; set; }
         public int MinParticipants { get; set; }
         public int MaxParticipants { get; set; }
         public string SpecialDemands { get; set; }
-        public string Category { get; set; }
+        public int Category { get; set; }
     }
 }
