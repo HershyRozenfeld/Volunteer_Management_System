@@ -7,7 +7,7 @@ namespace BLL
 {
     public class Activitie
     {
-        public int ActivitieID { get; set; }
+        public int ActivitieID { get; set; }//
         public string ActivityName { get; set; }
         public string ADescription { get; set; }
         public int City { get; set; }
