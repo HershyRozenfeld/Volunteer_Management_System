@@ -10,10 +10,8 @@ namespace BLL
         public int ActivitieID { get; set; }
         public string ActivityName { get; set; }
         public string ADescription { get; set; }
-        public DateTime StartDT { get; set; }
-        public DateTime EndDT { get; set; }
         public int City { get; set; }
-        public string GuarantorName { get; set; }
+        public int GuarantorID { get; set; }
         public int MinParticipants { get; set; }
         public int MaxParticipants { get; set; }
         public string SpecialDemands { get; set; }
