@@ -11,7 +11,6 @@ namespace BLL
         public string TDescription { get; set; }
         public string TName { get; set; }
         public string InCharge { get; set; }
-        public string ContactName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime Data { get; set; }
