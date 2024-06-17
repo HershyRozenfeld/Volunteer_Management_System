@@ -13,7 +13,7 @@ namespace BLL
         public string InCharge { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public DateTime Data { get; set; }
+        public DateTime Date { get; set; }
         public DateTime BeginningTime { get; set; }
         public DateTime EndTime { get; set; }
         public int Cyclical { get; set; }
