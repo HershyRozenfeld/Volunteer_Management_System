@@ -261,9 +261,6 @@ UpgradeLog*.htm
 ServiceFabricBackup/
 *.rptproj.bak
 
-# SQL Server files
-
-
 
 
 # Business Intelligence projects
