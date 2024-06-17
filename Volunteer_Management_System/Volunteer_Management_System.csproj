@@ -78,6 +78,15 @@
     <Compile Include="App_Code\BLL\User.cs" />
     <Compile Include="App_Code\BLL\Activitie.cs" />
     <Compile Include="App_Code\BLL\Task.cs" />
+    <Compile Include="App_Code\DAL\ActivitieDAL.cs" />
+    <Compile Include="App_Code\DAL\AvailabilityDAL.cs" />
+    <Compile Include="App_Code\DAL\CategoryDAL.cs" />
+    <Compile Include="App_Code\DAL\CityDAL.cs" />
+    <Compile Include="App_Code\DAL\RegistrDAL.cs" />
+    <Compile Include="App_Code\DAL\TaskDAL.cs" />
+    <Compile Include="App_Code\DAL\TaskHoursDAL.cs" />
+    <Compile Include="App_Code\DAL\UserDAL.cs" />
+    <Compile Include="App_Code\DBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +99,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\DAL\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
