@@ -10,6 +10,6 @@ namespace BLL
         public int OperatingHoursCode { get; set; }
         public int NumOfDay { get; set; }
         public DateTime BeginningTime { get; set; }
-        public int EndTime { get; set; }
+        public DateTime EndTime { get; set; }
     }
 }
