@@ -11,5 +11,6 @@ namespace BLL
         public int UserID { get; set; }
         public int numOfDay { get; set; }
         public DateTime BeginningTime { get; set; }
+        public DateTime EndingTime { get; set; }
     }
 }
