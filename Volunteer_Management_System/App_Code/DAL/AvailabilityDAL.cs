@@ -53,6 +53,7 @@ namespace DAL
                     numOfDay = (int)DT.Rows[i]["numOfDay"],
                     BeginningTime = (DateTime)DT.Rows[i]["BeginningTime"],
                     EndingTime = (DateTime)DT.Rows[i]["EndingTime"],
+                    OneTime = (int)DT.Rows[i]["OneTime"]
                 });
             }
             DB.Close();
@@ -73,6 +74,7 @@ namespace DAL
                     numOfDay = (int)DT.Rows[0]["numOfDay"],
                     BeginningTime = (DateTime)DT.Rows[0]["BeginningTime"],
                     EndingTime = (DateTime)DT.Rows[0]["EndingTime"],
+                    OneTime = (int)DT.Rows[0]["OneTime"]
                 };
             }
             DB.Close();
