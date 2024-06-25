@@ -16,8 +16,8 @@ namespace DAL
             string Sql = "";
             if (tmp.AvailabilityID == -1)
             {
-                Sql = $"insert into T_Availability (UserID, numOfDay, BeginningTime, EndingTime)";
-                Sql += $" values (N'{tmp.UserID}',{tmp.numOfDay},{tmp.BeginningTime},{tmp.EndingTime} ";
+                Sql = $"insert into T_Availability (UserID, numOfDay, BeginningTime, EndingTime, OneTime)";
+                Sql += $" values (N'{tmp.UserID}',{tmp.numOfDay},{tmp.BeginningTime},{tmp.EndingTime},{tmp.OneTime} ";
             }
             else
             {
@@ -26,6 +26,7 @@ namespace DAL
                 Sql += $" numOfDay= N'{tmp.numOfDay}' ";
                 Sql += $" BeginningTime= N'{tmp.BeginningTime}' ";
                 Sql += $" EndingTime= N'{tmp.EndingTime}' ";
+                Sql += $" OneTime = {tmp.OneTime}";
                 Sql += $" where AvailabilityID = {tmp.AvailabilityID} ";
             }
             DBContext DB = new DBContext();
@@ -52,6 +53,7 @@ namespace DAL
                     numOfDay = (int)DT.Rows[i]["numOfDay"],
                     BeginningTime = (DateTime)DT.Rows[i]["BeginningTime"],
                     EndingTime = (DateTime)DT.Rows[i]["EndingTime"],
+                    OneTime = (int)DT.Rows[i]["OneTime"]
                 });
             }
             DB.Close();
@@ -72,6 +74,7 @@ namespace DAL
                     numOfDay = (int)DT.Rows[0]["numOfDay"],
                     BeginningTime = (DateTime)DT.Rows[0]["BeginningTime"],
                     EndingTime = (DateTime)DT.Rows[0]["EndingTime"],
+                    OneTime = (int)DT.Rows[0]["OneTime"]
                 };
             }
             DB.Close();

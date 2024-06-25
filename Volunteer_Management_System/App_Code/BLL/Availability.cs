@@ -13,6 +13,7 @@ namespace BLL
         public int numOfDay { get; set; }
         public DateTime BeginningTime { get; set; }
         public DateTime EndingTime { get; set; }
+        public int OneTime { get; set; }
         public void Save()
         {
             AvailabilityDAL.Save(this);

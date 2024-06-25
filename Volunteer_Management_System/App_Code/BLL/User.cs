@@ -17,6 +17,6 @@ namespace BLL
         public int CityID { get; set; }
         public string Address { get; set; }
         public string Pass { get; set; }
-        public string skills { get; set; } 
+        public string Skills { get; set; } 
     }
 }

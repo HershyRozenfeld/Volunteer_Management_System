@@ -16,15 +16,15 @@ namespace DAL
             string Sql = "";
             if (tmp.RegistrID == -1)
             {
-                Sql = $"insert into T_Registr (UserID, ActivitieID, RegistrData,Status)";
-                Sql += $" values ({tmp.UserID},{tmp.ActivitieID},{tmp.RegistrData},{tmp.Status}";
+                Sql = $"insert into T_Registr (UserID, ActivitieID ,Status)";
+                Sql += $" values ({tmp.UserID},{tmp.ActivitieID},{tmp.Status}";
             }
             else
             {
                 Sql += "update T_Registr set ";
                 Sql += $" UserID= {tmp.UserID} ";
                 Sql += $" ActivitieID= {tmp.ActivitieID} ";
-                Sql += $" RegistrData= {tmp.RegistrData} ";
+               
                 Sql += $" Status= {tmp.Status}";
                 Sql += $" where RegistrID = {tmp.RegistrID} ";
             }
