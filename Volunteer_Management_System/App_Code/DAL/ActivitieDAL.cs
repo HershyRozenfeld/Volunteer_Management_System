@@ -17,18 +17,18 @@ namespace DAL
             if (tmp.ActivitieID == -1)
             {
                 Sql = $"insert into T_Activitie (ActivityName, ADescription, City, GuarantorID, MinParticipants, MaxParticipants, SpecialDemands, Category)";
-                Sql += $" values (N'{tmp.ActivityName}',{tmp.ADescription},{tmp.City},{tmp.GuarantorID},{tmp.MinParticipants},{tmp.MaxParticipants},{tmp.SpecialDemands},{tmp.Category} ";
+                Sql += $" values (N'{tmp.ActivityName}',N'{tmp.ADescription}',{tmp.City},{tmp.GuarantorID},{tmp.MinParticipants},{tmp.MaxParticipants},N'{tmp.SpecialDemands}',{tmp.Category} ";
             }
             else
             {
                 Sql += "update T_Activitie set ";
                 Sql += $" ActivityName= N'{tmp.ActivityName}' ";
-                Sql += $" ADescription= {tmp.ADescription} ";
+                Sql += $" ADescription= '{tmp.ADescription}' ";
                 Sql += $" City= {tmp.City} ";
                 Sql += $" GuarantorID= {tmp.GuarantorID} ";
                 Sql += $" MinParticipants= {tmp.MinParticipants} ";
                 Sql += $" MaxParticipants= {tmp.MaxParticipants} ";
-                Sql += $" SpecialDemands= {tmp.SpecialDemands} ";
+                Sql += $" SpecialDemands= N'{tmp.SpecialDemands}' ";
                 Sql += $" Category= {tmp.Category} ";
                 Sql += $" where ActivitieID = {tmp.ActivitieID} ";
             }
