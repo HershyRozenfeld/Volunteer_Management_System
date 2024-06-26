@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,30 +11,35 @@ namespace WebApi.controllers
     public class ActivitieController : ApiController
     {
         // GET: api/Activitie
-        public IEnumerable<string> Get()
+        public IEnumerable<Activitie> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Activitie.GetAll();
         }
 
         // GET: api/Activitie/5
-        public string Get(int id)
+        public Activitie Get(int id)
         {
-            return "value";
+            return Activitie.GetById(id);
         }
 
         // POST: api/Activitie
-        public void Post([FromBody]string value)
+        public void Post([FromBody] Activitie value)
         {
+            value.ActivitieID = -1;
+            value.Save();
         }
 
         // PUT: api/Activitie/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] Activitie value)
         {
+            value.ActivitieID = id;
+            value.Save();
         }
 
         // DELETE: api/Activitie/5
         public void Delete(int id)
         {
+            Activitie.DeleteById(id);
         }
     }
 }
