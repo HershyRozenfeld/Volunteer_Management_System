@@ -1,39 +1,46 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.UI;
 
 namespace WebApi.controllers
 {
     public class RegistrController : ApiController
     {
         // GET: api/Registr
-        public IEnumerable<string> Get()
+        public List<Registr> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Registr.GetAll();
         }
 
         // GET: api/Registr/5
-        public string Get(int id)
+        public Registr Get(int id)
         {
-            return "value";
+            return Registr.GetById(id);
         }
 
         // POST: api/Registr
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Registr value)
         {
+            value.RegistrID = -1;
+            value.Save();
         }
 
         // PUT: api/Registr/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Registr value)
         {
+            value.RegistrID = id;
+            value.Save();
         }
 
         // DELETE: api/Registr/5
         public void Delete(int id)
         {
+            Registr.DeleteById(id);
         }
     }
 }

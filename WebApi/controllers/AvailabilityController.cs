@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,30 +11,35 @@ namespace WebApi.controllers
     public class AvailabilityController : ApiController
     {
         // GET: api/Availability
-        public IEnumerable<string> Get()
+        public List<Availability> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Availability.GetAll();
         }
 
         // GET: api/Availability/5
-        public string Get(int id)
+        public Availability Get(int id)
         {
-            return "value";
+            return Availability.GetById(id);
         }
 
         // POST: api/Availability
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Availability value)
         {
+            value.AvailabilityID = -1;
+            value.Save();
         }
 
         // PUT: api/Availability/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Availability value)
         {
+            value.AvailabilityID = id;
+            value.Save();
         }
 
         // DELETE: api/Availability/5
         public void Delete(int id)
         {
+            Availability.DeleteById(id);
         }
     }
 }

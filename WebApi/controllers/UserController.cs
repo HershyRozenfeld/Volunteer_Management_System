@@ -14,28 +14,33 @@ namespace WebApi.controllers
         // GET: api/User
         public List<User> Get()
         {
-            return ;
+            return User.GetAll();
         }
 
         // GET: api/User/5
-        public string Get(int id)
+        public User Get(int id)
         {
-            return "value";
+            return User.GetById();
         }
 
         // POST: api/User
-        public void Post([FromBody]string value)
+        public void Post([FromBody]User value)
         {
+            value.UserID = -1;
+            value.Save();
         }
 
         // PUT: api/User/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]User value)
         {
+            value.UserID = id;
+            value.Save();
         }
 
         // DELETE: api/User/5
         public void Delete(int id)
         {
+            User.DeleteById(id);
         }
     }
 }

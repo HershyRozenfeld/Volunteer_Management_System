@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,30 +11,35 @@ namespace WebApi.controllers
     public class TaskController : ApiController
     {
         // GET: api/Task
-        public IEnumerable<string> Get()
+        public List<Task> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Task.GetAll();
         }
 
         // GET: api/Task/5
-        public string Get(int id)
+        public Task Get(int id)
         {
-            return "value";
+            return Task.GetById(id);
         }
 
         // POST: api/Task
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Task value)
         {
+            value.TID = -1;
+            value.Save();
         }
 
         // PUT: api/Task/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Task value)
         {
+            value.TID = id;
+            value.Save();
         }
 
         // DELETE: api/Task/5
         public void Delete(int id)
         {
+            Task.DeleteById(id);
         }
     }
 }
