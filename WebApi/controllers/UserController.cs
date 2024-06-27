@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace WebApi.controllers
         // GET: api/User/5
         public User Get(int id)
         {
-            return User.GetById();
+            return User.GetById(id);
         }
 
         // POST: api/User
