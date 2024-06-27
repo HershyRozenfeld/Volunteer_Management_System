@@ -67,6 +67,129 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RealAdmin\assets\avatars\face-1.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-2.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-3.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-4.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-5.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-6.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-7.jpg" />
+    <Content Include="RealAdmin\assets\avatars\face-8.jpg" />
+    <Content Include="RealAdmin\assets\images\logo.svg" />
+    <Content Include="RealAdmin\assets\images\qrcode.svg" />
+    <Content Include="RealAdmin\assets\products\p1.jpg" />
+    <Content Include="RealAdmin\assets\products\p2.jpg" />
+    <Content Include="RealAdmin\assets\products\p3.jpg" />
+    <Content Include="RealAdmin\assets\products\p4.jpg" />
+    <Content Include="RealAdmin\auth-confirm.html" />
+    <Content Include="RealAdmin\auth-login-half.html" />
+    <Content Include="RealAdmin\auth-login.html" />
+    <Content Include="RealAdmin\auth-register.html" />
+    <Content Include="RealAdmin\auth-resetpw.html" />
+    <Content Include="RealAdmin\calendar.html" />
+    <Content Include="RealAdmin\chart-apexcharts.html" />
+    <Content Include="RealAdmin\chart-chartjs.html" />
+    <Content Include="RealAdmin\chart-inline.html" />
+    <Content Include="RealAdmin\contacts-grid.html" />
+    <Content Include="RealAdmin\contacts-list.html" />
+    <Content Include="RealAdmin\contacts-new.html" />
+    <Content Include="RealAdmin\css\apexcharts.css" />
+    <Content Include="RealAdmin\css\app-dark.css" />
+    <Content Include="RealAdmin\css\app-light.css" />
+    <Content Include="RealAdmin\css\app-rtl.css" />
+    <Content Include="RealAdmin\css\bootstrap-datepicker.css" />
+    <Content Include="RealAdmin\css\dataTables.bootstrap4.css" />
+    <Content Include="RealAdmin\css\daterangepicker.css" />
+    <Content Include="RealAdmin\css\dropzone.css" />
+    <Content Include="RealAdmin\css\dropzone.min.css" />
+    <Content Include="RealAdmin\css\feather.css" />
+    <Content Include="RealAdmin\css\fullcalendar.css" />
+    <Content Include="RealAdmin\css\jquery.steps.css" />
+    <Content Include="RealAdmin\css\jquery.timepicker.css" />
+    <Content Include="RealAdmin\css\perfect-scrollbar.css" />
+    <Content Include="RealAdmin\css\quill.snow.css" />
+    <Content Include="RealAdmin\css\select2-bootstrap4.css" />
+    <Content Include="RealAdmin\css\select2.css" />
+    <Content Include="RealAdmin\css\simplebar.css" />
+    <Content Include="RealAdmin\css\uppy.min.css" />
+    <Content Include="RealAdmin\dashboard-analytics.html" />
+    <Content Include="RealAdmin\dashboard-saas.html" />
+    <Content Include="RealAdmin\dashboard-sales.html" />
+    <Content Include="RealAdmin\dashboard-system.html" />
+    <Content Include="RealAdmin\datamaps.html" />
+    <Content Include="RealAdmin\files-grid.html" />
+    <Content Include="RealAdmin\files-list.html" />
+    <Content Include="RealAdmin\fonts\feather.svg" />
+    <Content Include="RealAdmin\form_advanced.html" />
+    <Content Include="RealAdmin\form_elements.html" />
+    <Content Include="RealAdmin\form_layouts.html" />
+    <Content Include="RealAdmin\form_upload.html" />
+    <Content Include="RealAdmin\form_validation.html" />
+    <Content Include="RealAdmin\form_wizard.html" />
+    <Content Include="RealAdmin\index-boxed.html" />
+    <Content Include="RealAdmin\index-horizontal.html" />
+    <Content Include="RealAdmin\index-vertical.html" />
+    <Content Include="RealAdmin\index.html" />
+    <Content Include="RealAdmin\js\apexcharts.custom.js" />
+    <Content Include="RealAdmin\js\apexcharts.min.js" />
+    <Content Include="RealAdmin\js\apps.js" />
+    <Content Include="RealAdmin\js\bootstrap-datepicker.min.js" />
+    <Content Include="RealAdmin\js\bootstrap.min.js" />
+    <Content Include="RealAdmin\js\Chart.min.js" />
+    <Content Include="RealAdmin\js\config.js" />
+    <Content Include="RealAdmin\js\d3.min.js" />
+    <Content Include="RealAdmin\js\datamaps-zoomto.js" />
+    <Content Include="RealAdmin\js\datamaps.all.min.js" />
+    <Content Include="RealAdmin\js\datamaps.custom.js" />
+    <Content Include="RealAdmin\js\dataTables.bootstrap4.min.js" />
+    <Content Include="RealAdmin\js\daterangepicker.js" />
+    <Content Include="RealAdmin\js\dropzone.min.js" />
+    <Content Include="RealAdmin\js\fullcalendar.custom.js" />
+    <Content Include="RealAdmin\js\fullcalendar.js" />
+    <Content Include="RealAdmin\js\gauge.min.js" />
+    <Content Include="RealAdmin\js\jquery.dataTables.min.js" />
+    <Content Include="RealAdmin\js\jquery.mask.min.js" />
+    <Content Include="RealAdmin\js\jquery.min.js" />
+    <Content Include="RealAdmin\js\jquery.sparkline.min.js" />
+    <Content Include="RealAdmin\js\jquery.steps.min.js" />
+    <Content Include="RealAdmin\js\jquery.stickOnScroll.js" />
+    <Content Include="RealAdmin\js\jquery.timepicker.js" />
+    <Content Include="RealAdmin\js\jquery.validate.min.js" />
+    <Content Include="RealAdmin\js\moment.min.js" />
+    <Content Include="RealAdmin\js\perfect-scrollbar.min.js" />
+    <Content Include="RealAdmin\js\popper.min.js" />
+    <Content Include="RealAdmin\js\quill.min.js" />
+    <Content Include="RealAdmin\js\select2.min.js" />
+    <Content Include="RealAdmin\js\simplebar.min.js" />
+    <Content Include="RealAdmin\js\tinycolor-min.js" />
+    <Content Include="RealAdmin\js\topojson.min.js" />
+    <Content Include="RealAdmin\js\uppy.min.js" />
+    <Content Include="RealAdmin\page-404.html" />
+    <Content Include="RealAdmin\page-500.html" />
+    <Content Include="RealAdmin\page-blank.html" />
+    <Content Include="RealAdmin\page-invoice.html" />
+    <Content Include="RealAdmin\page-orders.html" />
+    <Content Include="RealAdmin\page-timeline.html" />
+    <Content Include="RealAdmin\profile-notification.html" />
+    <Content Include="RealAdmin\profile-security.html" />
+    <Content Include="RealAdmin\profile-settings.html" />
+    <Content Include="RealAdmin\profile.html" />
+    <Content Include="RealAdmin\support-center.html" />
+    <Content Include="RealAdmin\support-faqs.html" />
+    <Content Include="RealAdmin\support-ticket-detail.html" />
+    <Content Include="RealAdmin\support-tickets.html" />
+    <Content Include="RealAdmin\table_advanced.html" />
+    <Content Include="RealAdmin\table_basic.html" />
+    <Content Include="RealAdmin\table_datatables.html" />
+    <Content Include="RealAdmin\ui-buttons.html" />
+    <Content Include="RealAdmin\ui-color.html" />
+    <Content Include="RealAdmin\ui-icons.html" />
+    <Content Include="RealAdmin\ui-modals.html" />
+    <Content Include="RealAdmin\ui-notification.html" />
+    <Content Include="RealAdmin\ui-progress.html" />
+    <Content Include="RealAdmin\ui-tabs-accordion.html" />
+    <Content Include="RealAdmin\ui-typograpy.html" />
+    <Content Include="RealAdmin\widgets.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="RealAdmin\.DS_Store" />
+    <Content Include="RealAdmin\data\contacts.json" />
+    <Content Include="RealAdmin\data\eu.topo.json" />
+    <Content Include="RealAdmin\fonts\feather.eot" />
+    <Content Include="RealAdmin\fonts\feather.ttf" />
+    <Content Include="RealAdmin\fonts\feather.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -100,7 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="RealAdmin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
