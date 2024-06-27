@@ -11,7 +11,7 @@ namespace WebApi.controllers
     public class ActivitieController : ApiController
     {
         // GET: api/Activitie
-        public IEnumerable<Activitie> Get()
+        public List<Activitie> Get()
         {
             return Activitie.GetAll();
         }
