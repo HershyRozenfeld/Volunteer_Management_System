@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Volunteer_Management_System.RealAdmin
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
