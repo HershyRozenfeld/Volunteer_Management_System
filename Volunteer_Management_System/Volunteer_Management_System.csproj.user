@@ -9,6 +9,11 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+<<<<<<< HEAD
+    <NameOfLastUsedPublishProfile>C:\Users\משתמש\source\repos\Volunteer_Management_System\Volunteer_Management_System\Properties\PublishProfiles\FTPProfile.pubxml</NameOfLastUsedPublishProfile>
+=======
+    <NameOfLastUsedPublishProfile>C:\Users\y6764\source\repos\Volunteer_Management_System\Volunteer_Management_System\Properties\PublishProfiles\FTPProfile.pubxml</NameOfLastUsedPublishProfile>
+>>>>>>> 28cab89710d93ea299470606d4b4e61d18aa95e0
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
