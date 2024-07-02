@@ -7,13 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Volunteer_Management_System.RealAdmin
 {
+    public partial class Register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void BtnReg_Click(object sender, EventArgs e)
         {
 
         }
