@@ -89,12 +89,14 @@
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputPassword5">צור סיסמה</label>
-                                <input type="password" class="form-control" id="inputPassword5">
+                                <label for="TxtPass">צור סיסמה</label>
+                                <asp:TextBox ID="TxtPass" TextMode="Password" runat="server" class="form-control" />
+                                <asp:RequiredFieldValidator ID="RqPass" runat="server" ErrorMessage="צור סיסמה" ControlToValidate="TxtPass" />
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword6">חזור על הסיסמה</label>
-                                <input type="password" class="form-control" id="inputPassword6">
+                                <label for="TxtConfirmPass">חזור על הסיסמה</label>
+                                <asp:TextBox ID="TxtConfirmPass" TextMode="Password" runat="server" class="form-control" />
+                                <asp:CompareValidator ID="CVPass" runat="server" ErrorMessage="סיסמה ואימות אינם תואמים" ControlToValidate="TxtConfirmPass" ControlToCompare="TxtPass" ForeColor="Red" />
                             </div>
                         </div>
                         <div class="col-md-6">
