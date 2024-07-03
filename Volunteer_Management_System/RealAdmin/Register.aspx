@@ -112,6 +112,11 @@
                     <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
                 </div>
             </div>
+            <div class="row p-2">
+                <div class="col-md-6 col-sm-8">
+                     <asp:Literal ID="LtMsg" runat="server" />
+                         </div>
+                  </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
