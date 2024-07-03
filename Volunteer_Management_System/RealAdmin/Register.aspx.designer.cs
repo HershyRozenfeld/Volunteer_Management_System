@@ -186,6 +186,42 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RqSkill;
 
         /// <summary>
+        /// TxtPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtPass;
+
+        /// <summary>
+        /// RqPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqPass;
+
+        /// <summary>
+        /// TxtConfirmPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtConfirmPass;
+
+        /// <summary>
+        /// CVPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVPass;
+
+        /// <summary>
         /// BtnReg control.
         /// </summary>
         /// <remarks>
