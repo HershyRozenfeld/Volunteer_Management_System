@@ -132,13 +132,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RqPhone;
 
         /// <summary>
-        /// TxtCity control.
+        /// DDLCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCity;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCity;
 
         /// <summary>
         /// RqCity control.
@@ -175,15 +175,6 @@ namespace Volunteer_Management_System.RealAdmin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtSkill;
-
-        /// <summary>
-        /// RqSkill control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqSkill;
 
         /// <summary>
         /// BtnReg control.
