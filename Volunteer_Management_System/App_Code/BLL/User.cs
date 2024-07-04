@@ -6,7 +6,7 @@ using System.Web;
 
 namespace BLL
 {
-    public class User
+    public class Users
     {
         public int UserID { get; set; }
         public string FName { get; set; }
@@ -24,11 +24,11 @@ namespace BLL
         {
             UserDAL.Save(this);
         }
-        public static List<User> GetAll()
+        public static List<Users> GetAll()
         {
             return UserDAL.GetAll();
         }
-        public static User GetById(int Id)
+        public static Users GetById(int Id)
         {
             return UserDAL.GetById(Id);
         }

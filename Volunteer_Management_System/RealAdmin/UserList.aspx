@@ -17,7 +17,8 @@
                         <thead>
                           <tr>
                             <th>מספר מזהה</th>
-                            <th>שם משתמש</th>
+                            <th>שם פרטי</th>
+                              <th>שם משפחה</th>
                             <th>טלפון</th>
                             <th>מייל</th>
                             <th>כתובת</th>
@@ -29,26 +30,34 @@
                           </tr>
                         </thead>
                           <tbody>
-                              <tr>
-                            <td>368</td>
-                            <td>ירון </td>
-                            <td>(478) 446-9234</td>
-                            <td>Asset Management</td>
-                            <td>Borland</td>
-                            <td>9022 Suspendisse Rd.</td>
-                            <td>High Wycombe</td>
-                            <td>Jun 8, 2019</td>
-                             <td>ffgfhf</td>       
+                              <asp:Repeater ID="RptUser" runat="server">
+                                  <ItemTemplate>
+                          <tr>
+                            <td><%#Eval("UserID") %></td>
+                            <td><%#Eval("FName") %> </td>
+                            <td><%#Eval("LName") %></td>
+                           <td><%#Eval("Phone") %></td>
+                         <td><%#Eval("Email") %></td>
+                            <td><%#Eval("Address") %></td>
+                            <td><%#Eval("CityID") %></td>
+                            <td><%#Eval("Category") %></td>
+                              <td><%#Eval("Skills") %></td>
+                              <td><%#Eval("DateOfBirth") %></td>
+                              
+                                  
                             <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="text-muted sr-only">פרטים נוספים</span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">עריכה</a>
+                              <div class="dropdown-menu dropdown-menu-right ">
+                                <a class="dropdown-item" href="UserAdd.aspx?UserID=<%#Eval("UserID") %>">עריכה</a>
                                 <a class="dropdown-item" href="#">הסרה</a>
                                 <a class="dropdown-item" href="#">פרטים מלאים</a>
                               </div>
                             </td>
                           </tr>
+                                  </ItemTemplate>
+                              </asp:Repeater>
+                          
                           </tbody>
                          
                         
@@ -73,7 +82,10 @@
         "lengthMenu": [
           [16, 32, 64, -1],
           [16, 32, 64, "All"]
-        ]
+              ] ,
+          language: {
+              url: '//cdn.datatables.net/plug-ins/2.0.8/i18n/he.json'
+          }
       });
     </script>
 </asp:Content>

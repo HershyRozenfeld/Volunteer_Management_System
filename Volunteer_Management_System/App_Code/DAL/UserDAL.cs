@@ -12,7 +12,7 @@ namespace DAL
 {
     public class UserDAL
     {
-        public static void Save(User tmp)
+        public static void Save(Users tmp)
         {
             
             string Sql = "";
@@ -46,15 +46,15 @@ namespace DAL
                 DB.Close();
             }
         }
-        public static List<User> GetAll()
+        public static List<Users> GetAll()
         {
-            List<User> LstUser = new List<User>();
+            List<Users> LstUser = new List<Users>();
             string Sql = "select * from T_User";
             DBContext DB = new DBContext();
             DataTable DT = DB.Execute(Sql);
             for (int i = 0; i < DT.Rows.Count; i++)
             {
-                LstUser.Add(new User()
+                LstUser.Add(new Users()
                     {
                     UserID = (int)DT.Rows[i]["UserID"],
                     FName = DT.Rows[i]["FName"] + "",
@@ -71,15 +71,15 @@ namespace DAL
             DB.Close();
             return LstUser;
         }
-        public static User GetById(int Id)
+        public static Users GetById(int Id)
         {
-            User tmp = null;
+            Users tmp = null;
             string Sql = $"select * from T_User where UserID = {Id}";
             DBContext DB = new DBContext();
             DataTable DT = DB.Execute(Sql);
             if(DT.Rows.Count > 0)
             {
-                tmp = new User()
+                tmp = new Users()
                 {
                     UserID = (int)DT.Rows[0]["UserID"],
                     FName = DT.Rows[0]["FName"] + "",

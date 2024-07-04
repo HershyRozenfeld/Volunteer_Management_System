@@ -366,3 +366,4 @@ FodyWeavers.xsd
 /Volunteer_Management_System/App_Data/VolunteerManagementDB.mdf
 /Volunteer_Management_System/App_Data
 /Volunteer_Management_System/WebApi/WebApi.csproj
+*.cs

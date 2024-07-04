@@ -32,7 +32,7 @@ namespace Volunteer_Management_System.RealAdmin
             string msg = "";
             if(TxtFName.Text.Length < 2)
             {
-                msg += "<br/>שם פרטי אינו תקין!";
+                msg += "שם פרטי אינו תקין!<br/>";
             }
             if(TxtLName.Text.Length < 2)
             {
