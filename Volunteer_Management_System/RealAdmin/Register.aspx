@@ -83,7 +83,6 @@
                     <div class="form-group">
                         <label for="TxtSkill">מיומנוית וכישורים</label>
                         <asp:TextBox ID="TxtSkill" runat="server" class="form-control" />
-                        <asp:RequiredFieldValidator ID="RqSkill" runat="server" ErrorMessage="נא הכנס מיומנוית וכישורים" ControlToValidate="TxtSkill" />
                     </div>
                     <hr class="my-4" />
                     <div class="row mb-4">
