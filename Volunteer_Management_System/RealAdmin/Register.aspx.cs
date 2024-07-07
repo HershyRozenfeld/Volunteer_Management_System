@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,40 +12,70 @@ namespace Volunteer_Management_System.RealAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                //var LsCity = (List<City>)Application["City"];
+                //if (LsCity != null && LsCity.Count > 0)
+                //{
+                //    for (int i = 0; i < LsCity.Count; i++)
+                //    {
+                //        DDLCity.Items.Add(new ListItem(LsCity[i].Name, LsCity[i].CityID + ""));
+                //        DDLCity.Text = LsCity[i].Name;
+                //    }
+                //    DDLCity.Items.Insert(0, "בחר עיר");
+                //}
+            }
         }
 
         protected void BtnReg_Click(object sender, EventArgs e)
         {
             string msg = "";
-            if (TxtFName.Text.Length < 1)
+            if (TxtFName.Text.Length < 2)
             {
-                msg += "<br/>עליך להזין שם פרטי";
+                msg += "<br/>שם פרטי אינו תקין!";
             }
-            if (TxtLName.Text.Length < 1)
+            if (TxtLName.Text.Length < 2)
             {
-                msg += "<br/>עליך להזין שם משפחה";
+                msg += "<br/>שם משפחה אינו תקין!";
             }
             if (TxtEmail.Text.Length < 6)
             {
-                msg += "<br/>עליך להזין כתובת אימייל";
+                msg += "<br/>כתובת אימייל אינה תקינה!";
             }
             if (TxtBirth.Text.Length < 8)
             {
-                msg += "עליך להזין תאריך לידה<br/>";
+                msg += "תאריך לידה אינו תקין!<br/>";
             }
             if (TxtPhone.Text.Length < 10)
             {
-                msg += "עליך להזין מספר טלפון<br/>";
+                msg += "מספר הטלפון אינו תקין!<br/>";
             }
             if (msg != "")
             {
-                LtMsg.Text = msg;
             }
-            else
-            {
-                LtMsg.Text = "נרשמת בהצלחה!";
-            }
+            //try
+            //{
+                Users newUser = new Users
+                {
+                    UserID = -1,
+                    FName = TxtFName.Text,
+                    LName = TxtLName.Text,
+                    Email = TxtEmail.Text,
+                    DateOfBirth = DateTime.Parse(TxtBirth.Text),
+                    Phone = TxtPhone.Text,
+                    //CityID = int.Parse(DDLCity.SelectedValue),
+                    Address = TxtAddress.Text,
+                    Pass = TxtPass.Text,
+                    Skills = TxtSkill.Text
+                };
+
+                newUser.Save();
+                LtMsg.Text = "הרשמה בוצעה בהצלחה!";
+            //}
+            //catch (Exception ex)
+            //{
+            //    LtMsg.Text = "שגיאה בהרשמה: " + ex.Message;
+            //}
         }
     }
 }

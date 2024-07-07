@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="RealAdmin\Activitie.aspx" />
     <Content Include="RealAdmin\assets\avatars\face-1.jpg" />
     <Content Include="RealAdmin\assets\avatars\face-2.jpg" />
     <Content Include="RealAdmin\assets\avatars\face-3.jpg" />
@@ -255,6 +256,8 @@
     <Content Include="RealAdmin\profile-settings.html" />
     <Content Include="RealAdmin\profile.html" />
     <Content Include="RealAdmin\Register.aspx" />
+    <Content Include="RealAdmin\UserAdd.aspx" />
+    <Content Include="RealAdmin\UserList.aspx" />
     <Content Include="Scripts\jquery-3.7.1 - Copy.js" />
     <Content Include="Scripts\Register-MP.aspx" />
     <Content Include="RealAdmin\support-center.html" />
@@ -296,7 +299,7 @@
     <Compile Include="App_Code\BLL\City.cs" />
     <Compile Include="App_Code\BLL\Registr.cs" />
     <Compile Include="App_Code\BLL\TaskHours.cs" />
-    <Compile Include="App_Code\BLL\User.cs" />
+    <Compile Include="App_Code\BLL\Users.cs" />
     <Compile Include="App_Code\BLL\Activitie.cs" />
     <Compile Include="App_Code\BLL\Task.cs" />
     <Compile Include="App_Code\DAL\ActivitieDAL.cs" />
@@ -312,6 +315,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealAdmin\Activitie.aspx.cs">
+      <DependentUpon>Activitie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\Activitie.aspx.designer.cs">
+      <DependentUpon>Activitie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RealAdmin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -325,6 +335,20 @@
     </Compile>
     <Compile Include="RealAdmin\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\UserAdd.aspx.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\UserAdd.aspx.designer.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Register-MP.aspx.cs">
       <DependentUpon>Register-MP.aspx</DependentUpon>
