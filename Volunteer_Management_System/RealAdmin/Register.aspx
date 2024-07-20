@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="he">
 <head runat="server">
     <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -13,6 +14,7 @@
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css" />
     <!-- Fonts CSS -->
+    <link rel="stylesheet" href="css/select2Bootstrap.css" />
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
     <!-- Icons CSS -->
     <link rel="stylesheet" href="css/feather.css" />
@@ -57,8 +59,9 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="TxtBirth">תאריך לידה</label>
-                            <asp:TextBox ID="TxtBirth" runat="server" class="form-control" TextMode="Date" />
+                            <label for="date-input1">תאריך לידה</label>
+                            <label for="TxtBirth"></label>
+                            <asp:TextBox ID="TxtBirth" runat="server" class="form-control drgpicker" TextMode="Date" />
                             <asp:RequiredFieldValidator ID="RqBirth" runat="server" ErrorMessage="נא הכנס תאריך לידה" ControlToValidate="TxtBirth" />
                         </div>
                         <div class="form-group col-md-6">
@@ -70,16 +73,17 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="TxtCity">עיר</label>
-                            <%--<asp:TextBox ID="TxtCity" runat="server" class="form-control" />--%>
+                            <asp:TextBox ID="TxtCity" runat="server" class="form-control" />
 
-                          <%--  <asp:DropDownList ID="DDLCity" runat="server" class="form-control">
+                            <%--  <asp:DropDownList ID="DDLCity" runat="server" class="form-control">
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RqCity" runat="server" ErrorMessage="נא הכנס את עיר מגוריך" ControlToValidate="DDLCity" />
-                       --%> </div>
+                            --%>
+                        </div>
                         <div class="form-group col-md-6">
-                            <label for="TxtAddress">כתובת</label>
-                            <asp:TextBox ID="TxtAddress" runat="server" class="form-control" />
-                            <asp:RequiredFieldValidator ID="RqAddress" runat="server" ErrorMessage="נא הכנס כתובת מגורים" ControlToValidate="TxtAddress" />
+                            <label for="TxtStreet">כתובת</label>
+                            <asp:TextBox ID="TxtStreet" runat="server" class="form-control" />
+                            <asp:RequiredFieldValidator ID="RqAddress" runat="server" ErrorMessage="נא הכנס כתובת מגורים" ControlToValidate="TxtStreet" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -140,8 +144,80 @@
                 dataLayer.push(arguments);
             }
             gtag('js', new Date());
-            gtag('config', 'UA-56159088-1');
+            gtag('config', 'UAc="https://cdn.jsdelivr.net/npm/jquery-datatables@1.11.5/js/jquery.dataTables.min.js')
+
         </script>
+        <script>
+                    var ArrCity = [];
+                    let endPoint = 'https://data.gov.il/api/3/action/datastore_search?resource_id=d4901968-dad3-4845-a9b0-a57d027f11ab';
+                    function LoadCities() {
+                        //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
+                        // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
+                        fetch(endPoint).then((res) => res.json()).then((data) => {
+                            TmpCity = data.result.records;
+                            //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+                            ArrCity = TmpCity.map((city) => {
+                                //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+                                return { id: city["_id"], text: city["שם_ישוב"] }
+                            });
+                            localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+                        })
+                    }
+
+                    $(() => {
+                        CityStr = localStorage.getItem("ArrCity");
+                        if (CityStr == null) {
+                            LoadCities();
+                        }
+                        else {
+                            ArrCity = JSON.parse(CityStr);
+                        }
+
+                        $("#TxtCity").select2({
+                            data: ArrCity, 
+                            theme:"bootstrap"
+                        })
+                    })
+
+                    let endPoint2 = 'https://data.gov.il/api/3/action/datastore_search?resource_id=9ad3862c-8391-4b2f-84a4-2d4c68625f4b';
+                    var ArrStreet = [];
+                    function Loadstreets() {
+                        //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
+                        // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
+                        fetch(endPoint2).then((res) => res.json()).then((data) => {
+                            TmpStreet = data.result.records;
+                            //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+                            ArrStreet = TmpStreet.map((street) => {
+                                //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+                                return { id: street["סמל_רחוב"], text: street["שם_רחוב"] }
+                            });
+                            localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
+                        })
+                    }
+                    $(() => {
+                        StreetStr = localStorage.getItem("ArrStreet");
+                        if (StreetStr == null) {
+                            Loadstreets();
+                        }
+                        else {
+                            ArrStreet = JSON.parse(StreetStr);
+                        }
+
+                        $("#TxtStreet").select2({
+                            data: ArrStreet,
+                            theme: "bootstrap"
+                        })
+                    })
+            //let q = TxtCity.Text;
+            //function FilterArr(q) {
+            //    //כעת נלקחת הרשימה המצומצמת של הערים והמספור, ונשלחת לפונקציה שמחפשת תווים מסוימים בתוך שדה השם
+            //    return ArrCity.filter((city) => {
+            //        return (city.CityName.incloudes(q))
+            //    })
+            //}
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     </form>
 </body>
 </html>

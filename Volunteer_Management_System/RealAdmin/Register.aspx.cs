@@ -1,4 +1,6 @@
 ﻿using BLL;
+using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,19 +14,25 @@ namespace Volunteer_Management_System.RealAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                //var LsCity = (List<City>)Application["City"];
-                //if (LsCity != null && LsCity.Count > 0)
-                //{
-                //    for (int i = 0; i < LsCity.Count; i++)
-                //    {
-                //        DDLCity.Items.Add(new ListItem(LsCity[i].Name, LsCity[i].CityID + ""));
-                //        DDLCity.Text = LsCity[i].Name;
-                //    }
-                //    DDLCity.Items.Insert(0, "בחר עיר");
-                //}
-            }
+            //if (!IsPostBack)
+            //{
+            //    string Search = TxtCity.Text;
+            //    string EndPoint = "https://data.gov.il/api/3/action/datastore_search";
+
+            //    //יצירת אובייקט של שליחת בקשות
+            //    var client = new RestClient(EndPoint);
+            //    //יצירת אובייקט מסוג בקשה
+            //    var request = new RestRequest();
+            //    //הוספת פרמטרים לבקשה
+            //    request.AddParameter("resource_id", "5c78e9fa-c2e2-4771-93ff-7f400a12f7ba");
+            //    request.AddParameter("q", Search);
+            //    var res = client.Get(request);
+            //    var x = res.Content.ToLower();
+            //    var obj = JsonConvert.DeserializeObject<dynamic>(x);
+            //    //var records = obj.result.records;
+            //    //rptCity.DataSource = records;
+            //    //rptCity.DataBind();
+            //}
         }
 
         protected void BtnReg_Click(object sender, EventArgs e)
@@ -55,21 +63,23 @@ namespace Volunteer_Management_System.RealAdmin
             }
             //try
             //{
-                Users newUser = new Users
-                {
-                    UserID = -1,
-                    FName = TxtFName.Text,
-                    LName = TxtLName.Text,
-                    Email = TxtEmail.Text,
-                    DateOfBirth = DateTime.Parse(TxtBirth.Text),
-                    Phone = TxtPhone.Text,
-                    //CityID = int.Parse(DDLCity.SelectedValue),
-                    Address = TxtAddress.Text,
-                    Pass = TxtPass.Text,
-                    Skills = TxtSkill.Text
-                };
+            Users newUser = new Users
+            {
+                UserID = -1,
+                FName = TxtFName.Text,
+                LName = TxtLName.Text,
+                Email = TxtEmail.Text,
+                DateOfBirth = DateTime.Parse(TxtBirth.Text),
+                Phone = TxtPhone.Text,
+                //CityID = int.Parse(DDLCity.SelectedValue),
+                Address = TxtStreet.Text,
+                Pass = TxtPass.Text,
+                Skills = TxtSkill.Text
+            };
+            
 
-                newUser.Save();
+
+            newUser.Save();
                 LtMsg.Text = "הרשמה בוצעה בהצלחה!";
             //}
             //catch (Exception ex)

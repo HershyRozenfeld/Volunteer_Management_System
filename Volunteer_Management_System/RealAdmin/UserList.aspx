@@ -44,8 +44,6 @@
                                                     <td><%#Eval("Category") %></td>
                                                     <td><%#Eval("Skills") %></td>
                                                     <td><%#Eval("DateOfBirth") %></td>
-
-
                                                     <td>
                                                         <button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             <span class="text-muted sr-only">פרטים נוספים</span>
@@ -59,10 +57,7 @@
                                                 </tr>
                                             </ItemTemplate>
                                         </asp:Repeater>
-
                                     </tbody>
-
-
                                 </table>
                             </div>
                         </div>
