@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -13,10 +14,10 @@ namespace Volunteer_Management_System.RealAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
             {
                 FillData();
             }
+
         }
         public void FillData()
         {

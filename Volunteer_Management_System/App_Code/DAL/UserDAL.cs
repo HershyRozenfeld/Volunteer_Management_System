@@ -18,21 +18,21 @@ namespace DAL
             string Sql = "";
             if (tmp.UserID == -1)
             {
-                Sql = $"insert into T_Users (FName, LName, Email, DateOfBirth, Phone, Category, " +
-                    $"City, Address, Pass)";
+                Sql = $"insert into T_User (FName, LName, Email, DateOfBirth, Phone, Category, " +
+                    $"CityId, Address, Pass)";
                 Sql += $"values (N'{tmp.FName}',N'{tmp.LName}',N'{tmp.Email}',{tmp.DateOfBirth}," +
-                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.City},N'{tmp.Address}',N'{tmp.Pass}'";  
+                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.CityID},N'{tmp.Address}',N'{tmp.Pass}'";  
             }
             else
             {
-                Sql += "update T_Users set ";
+                Sql += "update T_User set ";
                 Sql += $" FName= N'{tmp.FName}' ";
                 Sql += $" LName= N'{tmp.LName}' ";
                 Sql += $" Email= N'{tmp.Email}' ";
                 Sql += $" DateOfBirth = {tmp.DateOfBirth}";
                 Sql += $" Phone= N'{tmp.Phone}' ";
                 Sql += $" Category= N'{tmp.Category}' ";
-                Sql += $" City ={tmp.City} ";
+                Sql += $" CityID ={tmp.CityID} ";
                 Sql += $" Address= N'{tmp.Address}' ";
                 Sql += $" Pass= N'{tmp.Pass}' ";
                 Sql += $" where UserID = {tmp.UserID} ";
@@ -63,7 +63,7 @@ namespace DAL
                    DateOfBirth =(DateTime) DT.Rows[i]["DateOfBirth"],
                     Phone = DT.Rows[i]["Phone"] + "",
                     Category = DT.Rows[i]["Category"] + "",
-                   City = int.Parse(DT.Rows[i]["City"]+""),
+                    CityID = (int)DT.Rows[i]["CityID"],
                     Address = DT.Rows[i]["Address"] + "",
                     Pass = DT.Rows[i]["Pass"] + ""
                 });
