@@ -13,26 +13,26 @@ namespace WebApi.controllers
     public class UserController : ApiController
     {
         // GET: api/User
-        public List<User> Get()
+        public List<Users> Get()
         {
-            return BLL.User.GetAll();
+            return BLL.Users.GetAll();
         }
 
         // GET: api/User/5
-        public User Get(int id)
+        public Users Get(int id)
         {
-            return BLL.User.GetById(id);
+            return BLL.Users.GetById(id);
         }
 
         // POST: api/User
-        public void Post([FromBody]User value)
+        public void Post([FromBody]Users value)
         {
             value.UserID = -1;
             value.Save();
         }
 
         // PUT: api/User/5
-        public void Put(int id, [FromBody]User value)
+        public void Put(int id, [FromBody]Users value)
         {
             value.UserID = id;
             value.Save();
@@ -41,7 +41,7 @@ namespace WebApi.controllers
         // DELETE: api/User/5
         public void Delete(int id)
         {
-            BLL.User.DeleteById(id);
+            BLL.Users.DeleteById(id);
         }
     }
 }
