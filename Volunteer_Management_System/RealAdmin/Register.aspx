@@ -189,7 +189,7 @@
                             //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
                             ArrStreet = TmpStreet.map((street) => {
                                 //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
-                                return { id: street["סמל_רחוב"], text: street["שם_רחוב"] }
+                                return { Sid: streetId["סמל_רחוב"], SName: streetName["שם_רחוב"], Cid: cityid }
                             });
                             localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
                         })
