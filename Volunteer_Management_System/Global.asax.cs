@@ -23,6 +23,7 @@ namespace Volunteer_Management_System
                 //CdnDebugPath = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js" // קישור ל-CDN עבור jQuery המלא
             }
         );
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)

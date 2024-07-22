@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RealAdmin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="Volunteer_Management_System.RealAdmin.UserList" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainCnt" runat="server">
@@ -17,7 +18,6 @@
                         <thead>
                           <tr>
                             <th>מספר מזהה</th>
-                            <th>שם משתמש</th>
                             <th>טלפון</th>
                             <th>מייל</th>
                             <th>כתובת</th>
@@ -29,26 +29,19 @@
                           </tr>
                         </thead>
                           <tbody>
-                              <tr>
-                            <td>368</td>
-                            <td>ירון </td>
-                            <td>(478) 446-9234</td>
-                            <td>Asset Management</td>
-                            <td>Borland</td>
-                            <td>9022 Suspendisse Rd.</td>
-                            <td>High Wycombe</td>
-                            <td>Jun 8, 2019</td>
-                             <td>ffgfhf</td>       
-                            <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <asp:Repeater ID="RptUser" runat="server">
+                                  <ItemTemplate>
+                          <tr>
                                 <span class="text-muted sr-only">פרטים נוספים</span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">עריכה</a>
                                 <a class="dropdown-item" href="#">הסרה</a>
                                 <a class="dropdown-item" href="#">פרטים מלאים</a>
                               </div>
                             </td>
                           </tr>
+                                  </ItemTemplate>
+                              </asp:Repeater>
+                          
                           </tbody>
                          
                         
@@ -73,7 +66,6 @@
         "lengthMenu": [
           [16, 32, 64, -1],
           [16, 32, 64, "All"]
-        ]
       });
     </script>
 </asp:Content>

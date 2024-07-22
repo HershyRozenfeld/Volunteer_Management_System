@@ -11,35 +11,125 @@ namespace Volunteer_Management_System.RealAdmin
 {
 
 
-    public partial class Register1
+    public partial class Activitie
     {
 
         /// <summary>
-        /// lightTheme control.
+        /// TxtAct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink lightTheme;
+        protected global::System.Web.UI.WebControls.TextBox TxtAct;
 
         /// <summary>
-        /// darkTheme control.
+        /// TxtCity3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink darkTheme;
+        protected global::System.Web.UI.WebControls.TextBox TxtCity3;
 
         /// <summary>
-        /// form1 control.
+        /// TxtGuarantor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox TxtGuarantor;
+
+        /// <summary>
+        /// TextBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+
+        /// <summary>
+        /// TxtDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtDescription;
+
+        /// <summary>
+        /// TxtMaxParticipants control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtMaxParticipants;
+
+        /// <summary>
+        /// TxtMinParticipants control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtMinParticipants;
+
+        /// <summary>
+        /// TxtSpecialDemands control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtSpecialDemands;
+
+        /// <summary>
+        /// TxtTask control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtTask;
+
+        /// <summary>
+        /// TxtInCharge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtInCharge;
+
+        /// <summary>
+        /// TxtCity1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCity1;
+
+        /// <summary>
+        /// TxtStreet2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtStreet2;
+
+        /// <summary>
+        /// TxtDescription2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtDescription2;
 
         /// <summary>
         /// TxtEmail control.
@@ -51,49 +141,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// RqEmail control.
+        /// TxtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqEmail;
-
-        /// <summary>
-        /// TxtFName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFName;
-
-        /// <summary>
-        /// RqFName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqFName;
-
-        /// <summary>
-        /// TxtLName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtLName;
-
-        /// <summary>
-        /// RqLName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqLName;
+        protected global::System.Web.UI.WebControls.TextBox TxtPhone;
 
         /// <summary>
         /// TxtBirth control.
@@ -105,49 +159,49 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtBirth;
 
         /// <summary>
-        /// RqBirth control.
+        /// TextBox4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqBirth;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
-        /// TxtPhone control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPhone;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// RqPhone control.
+        /// TextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqPhone;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// TxtCity control.
+        /// RqCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCity;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqCity;
 
         /// <summary>
-        /// TxtStreet control.
+        /// TxtAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtStreet;
+        protected global::System.Web.UI.WebControls.TextBox TxtAddress;
 
         /// <summary>
         /// RqAddress control.
@@ -168,49 +222,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtSkill;
 
         /// <summary>
-        /// TxtPass control.
+        /// RqSkill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPass;
-
-        /// <summary>
-        /// RqPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqPass;
-
-        /// <summary>
-        /// TxtConfirmPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtConfirmPass;
-
-        /// <summary>
-        /// CVPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CVPass;
-
-        /// <summary>
-        /// LtMsg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LtMsg;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqSkill;
 
         /// <summary>
         /// BtnReg control.
@@ -220,5 +238,14 @@ namespace Volunteer_Management_System.RealAdmin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnReg;
+
+        /// <summary>
+        /// BtnReg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LtMsg;
     }
 }

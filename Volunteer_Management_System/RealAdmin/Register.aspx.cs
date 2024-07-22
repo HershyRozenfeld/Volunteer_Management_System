@@ -30,25 +30,25 @@ namespace Volunteer_Management_System.RealAdmin
         protected void BtnReg_Click(object sender, EventArgs e)
         {
             string msg = "";
-            if(TxtFName.Text.Length < 2)
+            if(TxtFName.Text.Length < 1)
             {
-                msg += "<br/>שם פרטי אינו תקין!";
+                msg += "<br/>עליך להזין שם פרטי";
             }
-            if(TxtLName.Text.Length < 2)
+            if(TxtLName.Text.Length < 1)
             {
-                msg += "<br/>שם משפחה אינו תקין!";
+                msg += "<br/>עליך להזין שם משפחה";
             }
             if(TxtEmail.Text.Length < 6)
             {
-                msg += "<br/>כתובת אימייל אינה תקינה!";
+                msg += "<br/>עליך להזין כתובת אימייל";
             }
             if(TxtBirth.Text.Length < 8)
             {
-                msg += "תאריך לידה אינו תקין!<br/>";
+                msg += "עליך להזין תאריך לידה<br/>";
             }
             if(TxtPhone.Text.Length < 10)
             {
-                msg += "מספר הטלפון אינו תקין!<br/>";
+                msg += "עליך להזין מספר טלפון<br/>";
             }
             if(msg!= "")
             {
