@@ -71,8 +71,10 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="TxtCity">עיר</label>
-                            <asp:TextBox ID="TxtCity" runat="server" class="form-control" />
-                            <asp:RequiredFieldValidator ID="RqCity" runat="server" ErrorMessage="נא הכנס את עיר מגוריך" ControlToValidate="TxtCity" />
+                            <%--<asp:TextBox ID="TxtCity" runat="server" class="form-control" />--%>
+                           
+                            <asp:DropDownList ID="DDLCity" runat="server" ></asp:DropDownList>
+                             <asp:RequiredFieldValidator ID="RqCity" runat="server" ErrorMessage="נא הכנס את עיר מגוריך" ControlToValidate="DDLCity" />
                         </div>
                         <div class="form-group col-md-6">
                             <label for="TxtStreet">כתובת</label>
@@ -83,7 +85,7 @@
                     <div class="form-group">
                         <label for="TxtSkill">מיומנוית וכישורים</label>
                         <asp:TextBox ID="TxtSkill" runat="server" class="form-control" />
-                        <asp:RequiredFieldValidator ID="RqSkill" runat="server" ErrorMessage="נא הכנס מיומנוית וכישורים" ControlToValidate="TxtSkill" />
+  
                     </div>
                     <hr class="my-4" />
                     <div class="row mb-4">

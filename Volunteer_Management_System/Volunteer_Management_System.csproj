@@ -273,6 +273,7 @@
     <Content Include="RealAdmin\profile-settings.html" />
     <Content Include="RealAdmin\profile.html" />
     <Content Include="RealAdmin\Register.aspx" />
+    <Content Include="RealAdmin\UserList.aspx" />
     <Content Include="Scripts\jquery-3.7.1 - Copy.js" />
     <Content Include="Scripts\Register-MP.aspx" />
     <Content Include="RealAdmin\support-center.html" />
@@ -350,6 +351,13 @@
     </Compile>
     <Compile Include="RealAdmin\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Register-MP.aspx.cs">
       <DependentUpon>Register-MP.aspx</DependentUpon>

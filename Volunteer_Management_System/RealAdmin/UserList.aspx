@@ -18,8 +18,6 @@
                         <thead>
                           <tr>
                             <th>מספר מזהה</th>
-                            <th>שם פרטי</th>
-                              <th>שם משפחה</th>
                             <th>טלפון</th>
                             <th>מייל</th>
                             <th>כתובת</th>
@@ -34,19 +32,8 @@
                               <asp:Repeater ID="RptUser" runat="server">
                                   <ItemTemplate>
                           <tr>
-                            <td><%#Eval("UserID") %></td>
-                            <td><%#Eval("FName") %> </td>
-                            <td><%#Eval("LName") %></td>
-                           <td><%#Eval("Phone") %></td>
-                         <td><%#Eval("Email") %></td>
-                            <td><%#Eval("Address") %></td>
-                            <td><%#Eval("Category") %></td>
-                              <td><%#Eval("Skills") %></td>
-                              <td><%#Eval("DateOfBirth") %></td>
                                 <span class="text-muted sr-only">פרטים נוספים</span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right ">
-                                <a class="dropdown-item" href="UserAdd.aspx?UserID=<%#Eval("UserID") %>">עריכה</a>
                                 <a class="dropdown-item" href="#">הסרה</a>
                                 <a class="dropdown-item" href="#">פרטים מלאים</a>
                               </div>
@@ -61,6 +48,10 @@
                       </table>
                     </div>
                   </div>
+                </div> <!-- simple table -->
+              </div> <!-- end section -->
+            </div> <!-- .col-12 -->
+          </div> <!-- .row -->
         </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="FooterCnt" runat="server">
@@ -75,9 +66,6 @@
         "lengthMenu": [
           [16, 32, 64, -1],
           [16, 32, 64, "All"]
-          language: {
-              url: '//cdn.datatables.net/plug-ins/2.0.8/i18n/he.json'
-          }
       });
     </script>
 </asp:Content>
