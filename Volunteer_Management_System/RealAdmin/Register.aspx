@@ -4,16 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="he">
 <head runat="server">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="favicon.ico"/>
     <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
     <!-- Simple bar CSS -->
-    <link rel="stylesheet" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/simplebar.css"/>
     <!-- Fonts CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
     <!-- Icons CSS -->
     <link rel="stylesheet" href="css/feather.css">
     <!-- Date Range Picker CSS -->
@@ -91,12 +91,14 @@
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputPassword5">צור סיסמה</label>
-                                <input type="password" class="form-control" id="inputPassword5">
+                                <label for="TxtPass">צור סיסמה</label>
+                                <asp:TextBox ID="TxtPass" TextMode="Password" runat="server" class="form-control" />
+                                <asp:RequiredFieldValidator ID="RqPass" runat="server" ErrorMessage="צור סיסמה" ControlToValidate="TxtPass" />
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword6">חזור על הסיסמה</label>
-                                <input type="password" class="form-control" id="inputPassword6">
+                                <label for="TxtConfirmPass">חזור על הסיסמה</label>
+                                <asp:TextBox ID="TxtConfirmPass" TextMode="Password" runat="server" class="form-control" />
+                                <asp:CompareValidator ID="CVPass" runat="server" ErrorMessage="סיסמה ואימות אינם תואמים" ControlToValidate="TxtConfirmPass" ControlToCompare="TxtPass" ForeColor="Red" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -110,10 +112,12 @@
                             </ul>
                         </div>
                     </div>
+                
                     <asp:Button ID="BtnReg" runat="server" Text="הרשם" class="btn btn-lg btn-primary btn-block" OnClick="BtnReg_Click" />
+                    </div>
                     <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
                 </div>
-            </div>
+            
             <div class="row p-2">
                 <div class="col-md-6 col-sm-8">
                      <asp:Literal ID="LtMsg" runat="server" />

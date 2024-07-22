@@ -39,7 +39,7 @@
                            <td><%#Eval("Phone") %></td>
                          <td><%#Eval("Email") %></td>
                             <td><%#Eval("Address") %></td>
-                            <td><%#Eval("CityID") %></td>
+                            <td><%#Eval("City") %></td>
                             <td><%#Eval("Category") %></td>
                               <td><%#Eval("Skills") %></td>
                               <td><%#Eval("DateOfBirth") %></td>

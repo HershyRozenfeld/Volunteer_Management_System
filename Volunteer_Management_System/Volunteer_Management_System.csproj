@@ -192,6 +192,7 @@
     <Content Include="RealAdmin\css\select2.css" />
     <Content Include="RealAdmin\css\simplebar.css" />
     <Content Include="RealAdmin\css\uppy.min.css" />
+    <Content Include="RealAdmin\CtegoryList.aspx" />
     <Content Include="RealAdmin\dashboard-analytics.html" />
     <Content Include="RealAdmin\dashboard-saas.html" />
     <Content Include="RealAdmin\dashboard-sales.html" />
@@ -256,7 +257,7 @@
     <Content Include="RealAdmin\profile.html" />
     <Content Include="RealAdmin\Register.aspx" />
     <Content Include="RealAdmin\UserList.aspx" />
-    <Content Include="RealAdmin\UserAdd.aspx" />
+    <Content Include="RealAdmin\UserEdit.aspx" />
     <Content Include="Scripts\jquery-3.7.1 - Copy.js" />
     <Content Include="Scripts\Register-MP.aspx" />
     <Content Include="RealAdmin\support-center.html" />
@@ -321,6 +322,13 @@
     <Compile Include="RealAdmin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="RealAdmin\CtegoryList.aspx.cs">
+      <DependentUpon>CtegoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\CtegoryList.aspx.designer.cs">
+      <DependentUpon>CtegoryList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RealAdmin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -335,12 +343,12 @@
     <Compile Include="RealAdmin\UserList.aspx.designer.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RealAdmin\UserAdd.aspx.cs">
-      <DependentUpon>UserAdd.aspx</DependentUpon>
+    <Compile Include="RealAdmin\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RealAdmin\UserAdd.aspx.designer.cs">
-      <DependentUpon>UserAdd.aspx</DependentUpon>
+    <Compile Include="RealAdmin\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Register-MP.aspx.cs">
       <DependentUpon>Register-MP.aspx</DependentUpon>

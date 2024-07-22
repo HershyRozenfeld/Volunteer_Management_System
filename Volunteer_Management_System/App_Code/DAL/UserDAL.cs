@@ -18,21 +18,21 @@ namespace DAL
             string Sql = "";
             if (tmp.UserID == -1)
             {
-                Sql = $"insert into T_User (FName, LName, Email, DateOfBirth, Phone, Category, " +
-                    $"CityId, Address, Pass)";
+                Sql = $"insert into T_Users (FName, LName, Email, DateOfBirth, Phone, Category, " +
+                    $"City, Address, Pass)";
                 Sql += $"values (N'{tmp.FName}',N'{tmp.LName}',N'{tmp.Email}',{tmp.DateOfBirth}," +
-                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.CityID},N'{tmp.Address}',N'{tmp.Pass}'";  
+                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.City},N'{tmp.Address}',N'{tmp.Pass}'";  
             }
             else
             {
-                Sql += "update T_User set ";
+                Sql += "update T_Users set ";
                 Sql += $" FName= N'{tmp.FName}' ";
                 Sql += $" LName= N'{tmp.LName}' ";
                 Sql += $" Email= N'{tmp.Email}' ";
                 Sql += $" DateOfBirth = {tmp.DateOfBirth}";
                 Sql += $" Phone= N'{tmp.Phone}' ";
                 Sql += $" Category= N'{tmp.Category}' ";
-                Sql += $" CityID ={tmp.CityID} ";
+                Sql += $" City ={tmp.City} ";
                 Sql += $" Address= N'{tmp.Address}' ";
                 Sql += $" Pass= N'{tmp.Pass}' ";
                 Sql += $" where UserID = {tmp.UserID} ";
@@ -41,7 +41,7 @@ namespace DAL
             DB.ExecuteNonQuery(Sql);
             if(tmp.UserID == -1)
             {
-                Sql = $"select max(UserID) from T_User where LName= N'{tmp.LName}' ";
+                Sql = $"select max(UserID) from T_Users where LName= N'{tmp.LName}' ";
                 tmp.UserID = (int)DB.ExecuteScalar(Sql);
                 DB.Close();
             }
@@ -49,7 +49,7 @@ namespace DAL
         public static List<Users> GetAll()
         {
             List<Users> LstUser = new List<Users>();
-            string Sql = "select * from T_User";
+            string Sql = "select * from T_Users";
             DBContext DB = new DBContext();
             DataTable DT = DB.Execute(Sql);
             for (int i = 0; i < DT.Rows.Count; i++)
@@ -60,10 +60,10 @@ namespace DAL
                     FName = DT.Rows[i]["FName"] + "",
                     LName = DT.Rows[i]["LName"] + "",
                     Email = DT.Rows[i]["Email"] + "",
-                    DateOfBirth =(DateTime) DT.Rows[i]["DateOfBirth"],
+                   DateOfBirth =(DateTime) DT.Rows[i]["DateOfBirth"],
                     Phone = DT.Rows[i]["Phone"] + "",
                     Category = DT.Rows[i]["Category"] + "",
-                    CityID = (int)DT.Rows[i]["CityID"],
+                   City = int.Parse(DT.Rows[i]["City"]+""),
                     Address = DT.Rows[i]["Address"] + "",
                     Pass = DT.Rows[i]["Pass"] + ""
                 });
@@ -74,7 +74,7 @@ namespace DAL
         public static Users GetById(int Id)
         {
             Users tmp = null;
-            string Sql = $"select * from T_User where UserID = {Id}";
+            string Sql = $"select * from T_Users where UserID = {Id}";
             DBContext DB = new DBContext();
             DataTable DT = DB.Execute(Sql);
             if(DT.Rows.Count > 0)
@@ -88,7 +88,7 @@ namespace DAL
                     DateOfBirth = (DateTime)DT.Rows[0]["DateOfBirth"],
                     Phone = DT.Rows[0]["Phone"] + "",
                     Category = DT.Rows[0]["Category"] + "",
-                    CityID = (int)DT.Rows[0]["CityID"],
+                    City = (int)DT.Rows[0]["City"],
                     Address = DT.Rows[0]["Address"] + "",
                     Pass = DT.Rows[0]["Pass"] + ""
                 };
@@ -99,7 +99,7 @@ namespace DAL
         public static int DeleteById(int Id)
         {
             int RetVal = 0;
-            string Sql = $"delete * from T_User Where UserID={Id}";
+            string Sql = $"delete * from T_Users Where UserID={Id}";
             DBContext Db = new DBContext();
             RetVal = Db.ExecuteNonQuery(Sql);
             Db.Close();
