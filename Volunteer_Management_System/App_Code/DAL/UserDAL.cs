@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
+//using System.Linq;
 using System.Web;
 
 namespace DAL
@@ -14,14 +14,14 @@ namespace DAL
     {
         public static void Save(Users tmp)
         {
-            
+
             string Sql = "";
             if (tmp.UserID == -1)
             {
                 Sql = $"insert into T_Users (FName, LName, Email, DateOfBirth, Phone, Category, " +
                     $"City, Address, Pass)";
                 Sql += $"values (N'{tmp.FName}',N'{tmp.LName}',N'{tmp.Email}', '{tmp.DateOfBirth.ToString("MM/dd/yyyy")}'," +
-                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.City},N'{tmp.Address}',N'{tmp.Pass}')";  
+                    $"N'{tmp.Phone}',N'{tmp.Category}',{tmp.City},N'{tmp.Address}',N'{tmp.Pass}')";
             }
             else
             {
@@ -39,7 +39,7 @@ namespace DAL
             }
             DBContext DB = new DBContext();
             DB.ExecuteNonQuery(Sql);
-            if(tmp.UserID == -1)
+            if (tmp.UserID == -1)
             {
                 Sql = $"select max(UserID) from T_Users where LName= N'{tmp.LName}' ";
                 tmp.UserID = (int)DB.ExecuteScalar(Sql);
@@ -55,12 +55,12 @@ namespace DAL
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 LstUser.Add(new Users()
-                    {
+                {
                     UserID = (int)DT.Rows[i]["UserID"],
                     FName = DT.Rows[i]["FName"] + "",
                     LName = DT.Rows[i]["LName"] + "",
                     Email = DT.Rows[i]["Email"] + "",
-                    DateOfBirth =(DateTime) DT.Rows[i]["DateOfBirth"],
+                    DateOfBirth = (DateTime)DT.Rows[i]["DateOfBirth"],
                     Phone = DT.Rows[i]["Phone"] + "",
                     Category = DT.Rows[i]["Category"] + "",
                     City = (int)DT.Rows[i]["City"],
@@ -77,7 +77,7 @@ namespace DAL
             string Sql = $"select * from T_Users where UserID = {Id}";
             DBContext DB = new DBContext();
             DataTable DT = DB.Execute(Sql);
-            if(DT.Rows.Count > 0)
+            if (DT.Rows.Count > 0)
             {
                 tmp = new Users()
                 {

@@ -181,6 +181,7 @@
     <Content Include="RealAdmin\auth-register.html" />
     <Content Include="RealAdmin\auth-resetpw.html" />
     <Content Include="RealAdmin\calendar.html" />
+    <Content Include="RealAdmin\CategoryAddEdit.aspx" />
     <Content Include="RealAdmin\chart-apexcharts.html" />
     <Content Include="RealAdmin\chart-chartjs.html" />
     <Content Include="RealAdmin\chart-inline.html" />
@@ -260,6 +261,7 @@
     <Content Include="RealAdmin\js\tinycolor-min.js" />
     <Content Include="RealAdmin\js\topojson.min.js" />
     <Content Include="RealAdmin\js\uppy.min.js" />
+    <Content Include="RealAdmin\RegisterList.aspx" />
     <Content Include="RealAdmin\page-404.html" />
     <Content Include="RealAdmin\page-500.html" />
     <Content Include="RealAdmin\page-blank.html" />
@@ -271,7 +273,6 @@
     <Content Include="RealAdmin\profile-settings.html" />
     <Content Include="RealAdmin\profile.html" />
     <Content Include="RealAdmin\Register.aspx" />
-    <Content Include="RealAdmin\UserAdd.aspx" />
     <Content Include="RealAdmin\UserList.aspx" />
     <Content Include="Scripts\jquery-3.7.1 - Copy.js" />
     <Content Include="Scripts\Register-MP.aspx" />
@@ -357,13 +358,6 @@
     </Compile>
     <Compile Include="RealAdmin\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RealAdmin\UserAdd.aspx.cs">
-      <DependentUpon>UserAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RealAdmin\UserAdd.aspx.designer.cs">
-      <DependentUpon>UserAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="RealAdmin\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
