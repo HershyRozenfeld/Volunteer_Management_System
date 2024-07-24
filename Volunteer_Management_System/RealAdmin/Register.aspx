@@ -72,9 +72,9 @@
                         <div class="form-group col-md-6">
                             <label for="TxtCity">עיר</label>
                             <%--<asp:TextBox ID="TxtCity" runat="server" class="form-control" />--%>
-                           
-                            <asp:DropDownList ID="DDLCity" runat="server" ></asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RqCity" runat="server" ErrorMessage="נא הכנס את עיר מגוריך" ControlToValidate="DDLCity" />
+
+                            <asp:DropDownList ID="DDLCity" runat="server"></asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RqCity" runat="server" ErrorMessage="נא הכנס את עיר מגוריך" ControlToValidate="DDLCity" />
                         </div>
                         <div class="form-group col-md-6">
                             <label for="TxtStreet">כתובת</label>
@@ -85,7 +85,7 @@
                     <div class="form-group">
                         <label for="TxtSkill">מיומנוית וכישורים</label>
                         <asp:TextBox ID="TxtSkill" runat="server" class="form-control" />
-  
+
                     </div>
                     <hr class="my-4" />
                     <div class="row mb-4">
@@ -113,15 +113,15 @@
                         </div>
                     </div>
                     <asp:Button ID="BtnReg" runat="server" Text="הרשם" class="btn btn-lg btn-primary btn-block" OnClick="BtnReg_Click" />
-                    </div>
-                    <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
                 </div>
-            
+                <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
+            </div>
+
             <div class="row p-2">
                 <div class="col-md-6 col-sm-8">
-                     <asp:Literal ID="LtMsg" runat="server" />
-                         </div>
-                  </div>
+                    <asp:Literal ID="LtMsg" runat="server" />
+                </div>
+            </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -146,66 +146,75 @@
 
         </script>
         <script>
-                    var ArrCity = [];
-                    let endPoint = 'https://data.gov.il/api/3/action/datastore_search?resource_id=d4901968-dad3-4845-a9b0-a57d027f11ab';
-                    function LoadCities() {
-                        //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
-                        // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
-                        fetch(endPoint).then((res) => res.json()).then((data) => {
-                            TmpCity = data.result.records;
-                            //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
-                            ArrCity = TmpCity.map((city) => {
-                                //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
-                                return { id: city["_id"], text: city["שם_ישוב"] }
-                            });
-                            localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+            var ArrCity = [];
+            let endPoint = 'https://data.gov.il/api/3/action/datastore_search?resource_id=d4901968-dad3-4845-a9b0-a57d027f11ab';
+            function LoadCities() {
+                //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
+                // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
+                fetch(endPoint).then((res) => res.json()).then((data) => {
+                    TmpCity = data.result.records;
+                    //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+                    ArrCity = TmpCity.map((city) => {
+                        //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+                        return { id: city["_id"], text: city["שם_ישוב"] }
+                    });
+                    localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+                })
+            }
+
+            $(() => {
+                CityStr = localStorage.getItem("ArrCity");
+                if (CityStr == null) {
+                    LoadCities();
+                }
+                else {
+                    ArrCity = JSON.parse(CityStr);
+                }
+
+                $("#TxtCity").select2({
+                    data: ArrCity,
+                    theme: "bootstrap"
+                })
+            })
+
+            let endPoint2 = 'https://data.gov.il/api/3/action/datastore_search?resource_id=9ad3862c-8391-4b2f-84a4-2d4c68625f4b';
+            var ArrStreet = [];
+            function Loadstreets() {
+                //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
+                // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
+                fetch(endPoint2).then((res) => res.json()).then((data) => {
+                    TmpStreet = data.result.records;
+                    //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+                    ArrStreet = TmpStreet.map((street) => {
+                        //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+                        return { Sid: streetId["סמל_רחוב"], SName: streetName["שם_רחוב"], Cid: cityid["סמל_ישוב"] }
+                    });
+                    localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
+                })
+            }
+            $(() => {
+                StreetStr = localStorage.getItem("ArrStreet");
+                if (StreetStr == null) {
+                    Loadstreets();
+                }
+                else {
+                    ArrStreet = JSON.parse(StreetStr);
+                }
+
+                $("#TxtStreet").select2({
+                    data: ArrStreet,
+                    theme: "bootstrap"
+                })
+            })
+            $(() => {
+                #TxtStreet.One("change"){
+                    TmpStreet = function FilterArr(TxtStreet) {
+                        return ArrCity.filter((city) => {
+                            return (city.CityName.incloudes(q))
                         })
                     }
 
-                    $(() => {
-                        CityStr = localStorage.getItem("ArrCity");
-                        if (CityStr == null) {
-                            LoadCities();
-                        }
-                        else {
-                            ArrCity = JSON.parse(CityStr);
-                        }
-
-                        $("#TxtCity").select2({
-                            data: ArrCity, 
-                            theme:"bootstrap"
-                        })
-                    })
-
-                    let endPoint2 = 'https://data.gov.il/api/3/action/datastore_search?resource_id=9ad3862c-8391-4b2f-84a4-2d4c68625f4b';
-                    var ArrStreet = [];
-                    function Loadstreets() {
-                        //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
-                        // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
-                        fetch(endPoint2).then((res) => res.json()).then((data) => {
-                            TmpStreet = data.result.records;
-                            //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
-                            ArrStreet = TmpStreet.map((street) => {
-                                //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
-                                return { Sid: streetId["סמל_רחוב"], SName: streetName["שם_רחוב"], Cid: cityid }
-                            });
-                            localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
-                        })
-                    }
-                    $(() => {
-                        StreetStr = localStorage.getItem("ArrStreet");
-                        if (StreetStr == null) {
-                            Loadstreets();
-                        }
-                        else {
-                            ArrStreet = JSON.parse(StreetStr);
-                        }
-
-                        $("#TxtStreet").select2({
-                            data: ArrStreet,
-                            theme: "bootstrap"
-                        })
-                    })
+                })
             //let q = TxtCity.Text;
             //function FilterArr(q) {
             //    //כעת נלקחת הרשימה המצומצמת של הערים והמספור, ונשלחת לפונקציה שמחפשת תווים מסוימים בתוך שדה השם

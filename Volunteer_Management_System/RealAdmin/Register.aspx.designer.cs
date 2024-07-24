@@ -150,13 +150,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RqCity;
 
         /// <summary>
-        /// TxtAddress control.
+        /// TxtStreet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtAddress;
+        protected global::System.Web.UI.WebControls.TextBox TxtStreet;
 
         /// <summary>
         /// RqAddress control.
@@ -175,15 +175,6 @@ namespace Volunteer_Management_System.RealAdmin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtSkill;
-
-        /// <summary>
-        /// RqSkill control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqSkill;
 
         /// <summary>
         /// TxtPass control.
