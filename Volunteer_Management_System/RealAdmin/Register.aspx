@@ -111,15 +111,15 @@
                         </div>
                     </div>
                     <asp:Button ID="BtnReg" runat="server" Text="הרשם" class="btn btn-lg btn-primary btn-block" OnClick="BtnReg_Click" />
-                    </div>
-                    <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
                 </div>
-            
+                <p class="mt-5 mb-3 text-muted text-center">© 2024</p>
+            </div>
+
             <div class="row p-2">
                 <div class="col-md-6 col-sm-8">
-                     <asp:Literal ID="LtMsg" runat="server" />
-                         </div>
-                  </div>
+                    <asp:Literal ID="LtMsg" runat="server" />
+                </div>
+            </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -204,14 +204,44 @@
                             theme: "bootstrap"
                         })
                     })
-            //let q = TxtCity.Text;
-            //function FilterArr(q) {
-            //    //כעת נלקחת הרשימה המצומצמת של הערים והמספור, ונשלחת לפונקציה שמחפשת תווים מסוימים בתוך שדה השם
-            //    return ArrCity.filter((city) => {
-            //        return (city.CityName.incloudes(q))
-            //    })
-            //}
+                    
+                    $(() => {
+                          // בחירת שדה העיר
+                     const cityField = $("#TxtCity");
 
+                         // בחירת שדה הרחובות
+                         const streetsField = $("#TxtStreet");
+                        
+                         
+                         // פונקציה לסינון רחובות לפי עיר
+                         function filterStreetsByCity() {
+                           const selectedCityCode = cityField.val();
+                           const filteredStreets = ArrStreet.filter(street => street.cityCode === parseInt(selectedCityCode));
+                         
+                           // ניקוי שדה הרחובות הקודם
+                           streetsField.empty();
+                         
+                           // יצירת אפשרויות חדשות עבור שדה הרחובות
+                           filteredStreets.forEach(street => {
+                             streetsField.append($("<option>").val(street.streetCode).text(street.streetName));
+                     })
+                         }
+                         
+                         // אירוע שינוי שדה העיר
+                         cityField.on("change", filterStreetsByCity);
+                         
+                         // הפעלת פונקציית הסינון בפעם הראשונה
+                         filterStreetsByCity();
+                    });
+        
+                   //let q = TxtCity.Text;
+                   //function FilterArr(q) {
+                   //    //כעת נלקחת הרשימה המצומצמת של הערים והמספור, ונשלחת לפונקציה שמחפשת תווים מסוימים בתוך שדה השם
+                   //    return ArrCity.filter((city) => {
+                   //        return (city.CityName.incloudes(q))
+                   //    })
+                   //}
+        
         </script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     </form>

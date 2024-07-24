@@ -15,7 +15,7 @@ namespace BLL
         public DateTime DateOfBirth { get; set; }
         public string Phone { get; set; }
         public string Category { get; set; }
-        public int City { get; set; }
+        public int CityId { get; set; }
         public string Address { get; set; }
         public string Pass { get; set; }
         public string Skills { get; set; }
