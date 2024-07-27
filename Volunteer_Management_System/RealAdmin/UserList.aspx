@@ -49,7 +49,7 @@
                                 <span class="text-muted sr-only">פרטים נוספים</span>
                               </button>
                               <div class="dropdown-menu dropdown-menu-right ">
-                                <a class="dropdown-item" href="UserAdd.aspx?UserID=<%#Eval("UserID") %>">עריכה</a>
+                                <a class="dropdown-item" href="UserEdit.aspx?UserID=<%#Eval("UserID") %>">עריכה</a>
                                 <a class="dropdown-item" href="#">הסרה</a>
                                 <a class="dropdown-item" href="#">פרטים מלאים</a>
                               </div>

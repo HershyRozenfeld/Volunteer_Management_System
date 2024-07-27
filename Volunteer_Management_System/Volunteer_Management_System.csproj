@@ -246,6 +246,7 @@
     <Content Include="RealAdmin\js\tinycolor-min.js" />
     <Content Include="RealAdmin\js\topojson.min.js" />
     <Content Include="RealAdmin\js\uppy.min.js" />
+    <Content Include="RealAdmin\RegisterAddEdit.aspx" />
     <Content Include="RealAdmin\RegisterList.aspx" />
     <Content Include="RealAdmin\page-404.html" />
     <Content Include="RealAdmin\page-500.html" />
@@ -337,6 +338,13 @@
     </Compile>
     <Compile Include="RealAdmin\CtegoryList.aspx.designer.cs">
       <DependentUpon>CtegoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\RegisterAddEdit.aspx.cs">
+      <DependentUpon>RegisterAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\RegisterAddEdit.aspx.designer.cs">
+      <DependentUpon>RegisterAddEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="RealAdmin\RegisterList.aspx.cs">
       <DependentUpon>RegisterList.aspx</DependentUpon>
