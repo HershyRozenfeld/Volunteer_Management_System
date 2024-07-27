@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RealAdmin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="RegisterList.aspx.cs" Inherits="Volunteer_Management_System.RealAdmin.ListRegister" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RealAdmin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="RegisterList.aspx.cs" Inherits="Volunteer_Management_System.RealAdmin.RegisterList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainCnt" runat="server">
@@ -20,17 +20,25 @@
                           </tr>
                         </thead>
                         <tbody>
+                             <tr>
                             <asp:Repeater ID="RptRegister" runat="server" >
                                 <ItemTemplate>
-                          <tr>
+                         
                             <td><%#Eval("RegistrID") %></td>
                             <td><%#Eval("UserName") %></td>
                             <td><%#Eval("ActivitieID") %></td>
                             <td><%#Eval("RegistrData") %></td>
-                            <td><span class="badge badge-pill badge-warning">Hold</span></td>
-                          </tr>
-                                    </ItemTemplate>
+                               </ItemTemplate>
                         </asp:Repeater>
+                            <td><asp:Literal ID="LtSt" runat="server" />  </td>
+                            
+                                
+                               
+
+                                
+                          </tr>
+                                   
+                            
                         </tbody>
                       </table>
                     </div>
