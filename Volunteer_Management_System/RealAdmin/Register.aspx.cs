@@ -14,16 +14,7 @@ namespace Volunteer_Management_System.RealAdmin
         {
             if(!IsPostBack)
             {
-                var LsCity = (List<City>)Application["City"];
-                if (LsCity != null && LsCity.Count > 0)
-                {
-                    for (int i = 0; i < LsCity.Count; i++)
-                    {
-                        DDLCity.Items.Add(new ListItem(LsCity[i].Name, LsCity[i].CityID + ""));
-                        DDLCity.Text = LsCity[i].Name;
-                    }
-                    DDLCity.Items.Insert(0, "בחר עיר");
-                }
+               
             }       
         }
 
@@ -58,6 +49,16 @@ namespace Volunteer_Management_System.RealAdmin
             {
                 LtMsg.Text = "נרשמת בהצלחה";
             }
+            //Users UserTmp = new Users()
+            //{
+            //    FName = TxtFName.Text,
+            //    LName = TxtLName.Text,
+            //    Email = TxtEmail.Text,
+            //    Phone = TxtPhone.Text,
+            //    Skills = TxtSkill.Text,
+            //    CityId = int.Parse(TxtCity.
+
+            //};
         }
     }
 }

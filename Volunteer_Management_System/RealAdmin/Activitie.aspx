@@ -24,10 +24,11 @@
                                     <small id="activitieHelp" class="form-text text-muted">שדה זה אינו יכול להישאר ריק.</small>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="TxtCity3">עיר</label>
-                                    <asp:TextBox ID="TxtCity3" runat="server" class="form-control" />
-                                    <small id="City2Help" class="form-text text-muted">שדה זה אינו יכול להישאר ריק.</small>
-
+                                    <label for="TxtCity1">עיר</label>
+                                    <asp:DropDownList ID="TxtCity1" runat="server" class="form-control" >
+                                        <asp:ListItem Value="-1">בחר עיר</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <small id="City1Help" class="form-text text-muted">שדה זה אינו יכול להישאר ריק.</small>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="Guarantor">אחראי</label>
@@ -97,13 +98,13 @@
                                             <!-- /.form-row -->
                                             <div class="form-row">
                                                 <div class="col-md-4 mb-3">
-                                                    <label for="TxtCity">עיר</label>
-                                                    <asp:TextBox ID="TxtCity1" runat="server" class="form-control" />
+                                                    <label for="TxtCity2">עיר</label>
+                                                    <asp:DropDownList ID="TxtCity2" runat="server" class="form-control" />
                                                     <small id="CityHelp" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-8 mb-3">
                                                     <label for="TxtStreet2">כתובת</label>
-                                                    <asp:TextBox ID="TxtStreet2" runat="server" class="form-control" />
+                                                    <asp:DropDownList ID="TxtStreet2" runat="server" class="form-control" />
                                                     <small id="StreetHelp" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                             </div>
@@ -136,14 +137,14 @@
                                                     <small id="SpecialDemandsHelp" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label for="example-time">שעת התחלה</label>
-                                                    <input class="form-control" id="example-time" type="time" name="time" required>
-                                                    <small id="SpecialDemandsHelp" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtBeginningTime">שעת התחלה</label>
+                                                    <asp:TextBox ID="TxtBeginningTime" runat="server" class="form-control drgpicker" TextMode="Time" />
+                                                    <small id="BeginningTimeHelp" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label for="example-time">שעת סיום</label>
-                                                    <input class="form-control" id="example-time" type="time" name="time" required>
-                                                    <small id="SpecialDemandsHelp" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtEndTime">שעת סיום</label>
+                                                    <asp:TextBox ID="TxtEndTime" runat="server" class="form-control drgpicker" TextMode="Time" />
+                                                    <small id="TxtEndTimeHelp" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                             </div>
 
@@ -203,14 +204,14 @@
                                             <!-- /.form-row -->
                                             <div class="form-row">
                                                 <div class="col-md-4 mb-3">
-                                                    <label for="TxtCity">עיר</label>
-                                                    <asp:TextBox ID="TextBox5" runat="server" class="form-control" />
-                                                    <small id="CityHelp" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtCity3">עיר</label>
+                                                    <asp:DropDownList ID="TxtCity3" runat="server" class="form-control" />
+                                                    <small id="City3Help" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-8 mb-3">
-                                                    <label for="TxtStreet2">כתובת</label>
-                                                    <asp:TextBox ID="TextBox6" runat="server" class="form-control" />
-                                                    <small id="StreetHelp" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtStreet3">כתובת</label>
+                                                    <asp:DropDownList ID="TxtStreet3" runat="server" class="form-control" />
+                                                    <small id="Street3Help" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                             </div>
                                             <div class="form-group mb-3">
@@ -242,21 +243,21 @@
                                                     <small id="SpecialDemands2Help" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label for="example-time">שעת התחלה</label>
-                                                    <input class="form-control" id="example-time" type="time" name="time" required>
-                                                    <small id="SpecialDemands2Help" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtBeginningTime2">שעת התחלה</label>
+                                                    <asp:TextBox ID="TxtBeginningTime2" runat="server" class="form-control drgpicker" TextMode="Time" />
+                                                    <small id="BeginningTimeHelp2" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label for="example-time">שעת סיום</label>
-                                                    <input class="form-control" id="example-time" type="time" name="time" required>
-                                                    <small id="SpecialDemands2Help" class="form-text text-muted">שדה רשות.</small>
+                                                    <label for="TxtEndTime2">שעת סיום</label>
+                                                    <asp:TextBox ID="TxtEndTime2" runat="server" class="form-control drgpicker" TextMode="Time" />
+                                                    <small id="EndTimeHelp2" class="form-text text-muted">שדה רשות.</small>
                                                 </div>
                                             </div>
 
                                             <div class="form-group mb-3">
                                                 <label for="validationTextarea1">הערות נוספות</label>
-                                                <asp:TextBox ID="TextBox11" runat="server" class="form-control" TextMode="MultiLine" Rows="2" />
-                                                <small id="SpecialDemands2Help" class="form-text text-muted">שדה רשות.</small>
+                                                <asp:TextBox ID="TextBox13" runat="server" class="form-control" TextMode="MultiLine" Rows="2" />
+                                                <small id="SpecialDemandsHelp" class="form-text text-muted">שדה רשות.</small>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="mb-2">מצב משימה</p>
@@ -265,27 +266,27 @@
                                                         <div class="custom-control custom-checkbox">
                                                             <input type="checkbox" class="custom-control-input" id="customCheck4">
                                                             <label class="custom-control-label" for="customCheck4">משימה רב פעמית</label>
-                                                            <small id="SpecialDemands2Help" class="form-text text-muted">בחירה חובה.</small>
+                                                            <small id="SpecialDemandsHelp" class="form-text text-muted">בחירה חובה.</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="custom-control custom-checkbox">
                                                             <input type="checkbox" class="custom-control-input" id="customCheck3">
                                                             <label class="custom-control-label" for="customCheck3">משימה זו הושלמה באופן סופי</label>
-                                                            <small id="SpecialDemands2Help" class="form-text text-muted">בחירה רשות.</small>
+                                                            <small id="SpecialDemandsHelp" class="form-text text-muted">בחירה רשות.</small>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             </br>
-                     
-                                            <button class="btn btn-primary" type="submit">שמור משימה</button>
+                   
+                <button class="btn btn-primary" type="submit">שמור משימה</button>
                                         </form>
                                     </div>
                                     <!-- /.card-body -->
                                 </div>
                                 <!-- /.card -->
-                            </div> 
+                            </div>
                             <!-- /.col -->
                         </div>
                         <!-- end section -->
@@ -304,30 +305,76 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderFooter" runat="server">
     <script>
+        //var ArrCity = [];
+        //let endPoint = 'https://data.gov.il/api/3/action/datastore_search?resource_id=d4901968-dad3-4845-a9b0-a57d027f11ab';
+        //function LoadCities() {
+        //    //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
+        //    // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
+        //    fetch(endPoint).then((res) => res.json()).then((data) => {
+        //        TmpCity = data.result.records;
+        //        //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+        //        ArrCity = TmpCity.map((city) => {
+        //            //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+        //            return { id: city["_id"], text: city["שם_ישוב"] }
+        //        });
+        //        localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+        //    })
+        //}
+
+
+        let endPoint2 = 'https://data.gov.il/api/3/action/datastore_search?resource_id=9ad3862c-8391-4b2f-84a4-2d4c68625f4b&limit=100000';
+        var ArrStreet = [];
+        var allDada = [];
         var ArrCity = [];
-        let endPoint = 'https://data.gov.il/api/3/action/datastore_search?resource_id=d4901968-dad3-4845-a9b0-a57d027f11ab';
-        function LoadCities() {
+        function Loadstreets() {
             //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
             // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
-            fetch(endPoint).then((res) => res.json()).then((data) => {
-                TmpCity = data.result.records;
-                //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
-                ArrCity = TmpCity.map((city) => {
-                    //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
-                    return { id: city["_id"], text: city["שם_ישוב"] }
+            fetch(endPoint2).then((res) => res.json()).then((data) => {
+                allDada = data.result.records;
+                /*const ArrCity = [];*/
+                //allDada.forEach((street) => {
+                //    if (!ArrCity.some((city) => city.cityCode === street.סמל_ישוב)) {
+                //        ArrCity.push({ id: street.סמל_ישוב, text: street.שם_ישוב });
+                //    }
+                //});
+                //localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+                const citiesMap = new Map();
+                allDada.forEach((street) => {
+                    if (!citiesMap.has(street.סמל_ישוב)) {
+                        citiesMap.set(street.סמל_ישוב, { id: street.סמל_ישוב, text: street.שם_ישוב });
+                    }
                 });
+
+                ArrCity = Array.from(citiesMap.values());
                 localStorage.setItem("ArrCity", JSON.stringify(ArrCity));
+                console.log(ArrCity);
+
+                //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
+                ArrStreet = allDada.map((street) => {
+                    //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
+                    return { id: street["סמל_רחוב"], text: street["שם_רחוב"] }
+                });
+                localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
             })
         }
         $(() => {
+            StreetStr = localStorage.getItem("ArrStreet");
             CityStr = localStorage.getItem("ArrCity");
-            if (CityStr == null) {
-                LoadCities();
+            if (StreetStr == null) {
+                Loadstreets();
             }
             else {
+                ArrStreet = JSON.parse(StreetStr);
                 ArrCity = JSON.parse(CityStr);
             }
-
+            $("#MainCnt_TxtStreet2").select2({
+                data: ArrStreet,
+                theme: "bootstrap"
+            })
+            $("#MainCnt_TxtStreet3").select2({
+                data: ArrStreet,
+                theme: "bootstrap"
+            })
             $("#MainCnt_TxtCity1").select2({
                 data: ArrCity,
                 theme: "bootstrap"
@@ -340,37 +387,6 @@
                 data: ArrCity,
                 theme: "bootstrap"
             })
-
-        })
-
-        let endPoint2 = 'https://data.gov.il/api/3/action/datastore_search?resource_id=9ad3862c-8391-4b2f-84a4-2d4c68625f4b';
-        var ArrStreet = [];
-        function Loadstreets() {
-            //הפונקציה גולשת לכתובת הלינק ושולחת את התוכן שהתקבל לפונקציה שתפקידה להמיר לג'יסון את המידע
-            // ואז היא מעבירה את המומר לפונקציה ששולפת מתוכה רק את השדות עם המידע על הערים
-            fetch(endPoint2).then((res) => res.json()).then((data) => {
-                TmpStreet = data.result.records;
-                //ואז היא מעבירה את המסונן לפונקציה שיכולה לסנן שתי שדות או יותר מתוך האזור הנבחר
-                ArrStreet = TmpStreet.map((street) => {
-                    //מה שמשאיר אותנו בשורה הסופית עם רשימה ג'יסונית של כל הערים והמספור האישי שלהם
-                    return { id: street["סמל_רחוב"], text: street["שם_רחוב"] }
-                });
-                localStorage.setItem("ArrStreet", JSON.stringify(ArrStreet));
-            })
-        }
-        $(() => {
-            StreetStr = localStorage.getItem("ArrStreet");
-            if (StreetStr == null) {
-                Loadstreets();
-            }
-            else {
-                ArrStreet = JSON.parse(StreetStr);
-            }
-            $("#MainCnt_TxtStreet2").select2({
-                data: ArrStreet,
-                theme: "bootstrap"
-            })
-
         })
     </script>
     <script>

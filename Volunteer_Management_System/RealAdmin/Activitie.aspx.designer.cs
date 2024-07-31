@@ -24,13 +24,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtAct;
 
         /// <summary>
-        /// TxtCity3 control.
+        /// TxtCity1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCity3;
+        protected global::System.Web.UI.WebControls.DropDownList TxtCity1;
 
         /// <summary>
         /// TxtGuarantor control.
@@ -105,13 +105,13 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtInCharge;
 
         /// <summary>
-        /// TxtCity1 control.
+        /// TxtCity2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCity1;
+        protected global::System.Web.UI.WebControls.DropDownList TxtCity2;
 
         /// <summary>
         /// TxtStreet2 control.
@@ -120,7 +120,7 @@ namespace Volunteer_Management_System.RealAdmin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtStreet2;
+        protected global::System.Web.UI.WebControls.DropDownList TxtStreet2;
 
         /// <summary>
         /// TxtDescription2 control.
@@ -159,6 +159,24 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TxtBirth;
 
         /// <summary>
+        /// TxtBeginningTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtBeginningTime;
+
+        /// <summary>
+        /// TxtEndTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEndTime;
+
+        /// <summary>
         /// TextBox4 control.
         /// </summary>
         /// <remarks>
@@ -186,22 +204,22 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// TextBox5 control.
+        /// TxtCity3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.DropDownList TxtCity3;
 
         /// <summary>
-        /// TextBox6 control.
+        /// TxtStreet3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.DropDownList TxtStreet3;
 
         /// <summary>
         /// TextBox7 control.
@@ -240,12 +258,30 @@ namespace Volunteer_Management_System.RealAdmin
         protected global::System.Web.UI.WebControls.TextBox TextBox10;
 
         /// <summary>
-        /// TextBox11 control.
+        /// TxtBeginningTime2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox TxtBeginningTime2;
+
+        /// <summary>
+        /// TxtEndTime2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEndTime2;
+
+        /// <summary>
+        /// TextBox13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox13;
     }
 }
