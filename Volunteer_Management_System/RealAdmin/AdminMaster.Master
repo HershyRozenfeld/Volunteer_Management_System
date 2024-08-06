@@ -19,8 +19,8 @@
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
+    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme">
     <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
-    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -32,7 +32,7 @@
                 <i class="fe fe-menu navbar-toggler-icon"></i>
             </button>
             <form class="form-inline mr-auto searchform text-muted">
-                <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="הקלד משהו..." aria-label="Search">
+                <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="חיפוש" aria-label="Search">
             </form>
             <ul class="nav">
                 <li class="nav-item">

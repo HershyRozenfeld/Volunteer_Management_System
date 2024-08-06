@@ -15,15 +15,6 @@ namespace Volunteer_Management_System.RealAdmin
     {
 
         /// <summary>
-        /// lightTheme control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink lightTheme;
-
-        /// <summary>
         /// darkTheme control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace Volunteer_Management_System.RealAdmin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlLink darkTheme;
+
+        /// <summary>
+        /// lightTheme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink lightTheme;
 
         /// <summary>
         /// head control.

@@ -8665,11 +8665,13 @@ button:focus {
 
 .searchform {
   position: relative; }
-  .searchform:before {
-    font-family: "feather";
-    content: "\e9cc";
-    position: absolute;
-    left: 0; }
+    .searchform:before {
+        font-family: "feather";
+        content: "\e9cc";
+        position: absolute;
+        left: 0;
+        margin-left: 1.0rem;
+    }
   .searchform.searchform-lg:before {
     left: 1rem;
     top: 0.7rem; }

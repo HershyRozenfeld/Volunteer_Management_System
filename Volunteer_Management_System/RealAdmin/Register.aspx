@@ -24,12 +24,12 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/select2Bootstrap.css" />
 </head>
-<body class="vertical  light rtl" style="background-color: #f8f9fa">
+<body class="vertical  light rtl" >
     <form id="form1" runat="server">
-        <div class="wrapper vh-100">
+        <div class="wrapper vh-100" style="margin-right: 0rem">
             <div class="row align-items-center h-100">
                 <div class="col-lg-6 col-md-8 col-10 mx-auto">
-                 <div class="container" style="background-color: #ffffff; border-radius: 18px; padding: 35px; width: 100%; margin: 20px 0;" >
+                 <div class="container" style="background-color: #ffffff; border-radius: 55px; padding: 35px; width: 100%; margin: 20px 0; " >
                     <div class="mx-auto text-center my-4">
                         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="100" height="100">
@@ -39,7 +39,9 @@
                         </a>
                         <br />
                         <br />
-                        <h2 class="my-3">הרשמה</h2>
+                        <HR>
+                        <br />
+                        <h2 class="my-3">צור פרופיל מתנדב</h2>
                     </div>
                     <div class="form-group">
                         <label for="TxtEmail">אימייל</label>
@@ -242,3 +244,4 @@
     </form>
 </body>
 </html>
+

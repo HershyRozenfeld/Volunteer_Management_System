@@ -9,11 +9,11 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2 class="page-title">פעילות חדשה </h2>
+                <h2 class="page-title">יצירת ועריכת פעילות  </h2>
                 <p class="text-muted">אזור יצירת פעולה חדשה עבור מטרת התנדבות לזולת.</p>
                 <div class="card shadow mb-4">
                     <div class="card-header">
-                        <strong class="card-title">צור פעילות</strong>
+                        <strong class="card-title">צור וערוך פעילות</strong>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="TxtCity1">עיר</label>
-                                    <asp:DropDownList ID="TxtCity1" runat="server" class="form-control" >
+                                    <asp:DropDownList ID="TxtCity1" runat="server" class="form-control">
                                         <asp:ListItem Value="-1">בחר עיר</asp:ListItem>
                                     </asp:DropDownList>
                                     <small id="City1Help" class="form-text text-muted">שדה זה אינו יכול להישאר ריק.</small>
@@ -73,13 +73,15 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-12">
+                        <hr />
+
                         <h3 class="page-title">חלוקה למשימות</h3>
                         <p class="text-muted">חלוקת פעולה, למשימות רבות ממוקדות ומכוונות.</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card shadow mb-4">
                                     <div class="card-header">
-                                        <strong class="card-title">פרטי משימה</strong>
+                                        <strong class="card-title">צור וערוך משימה</strong>
                                     </div>
                                     <div class="card-body">
                                         <form class="needs-validation" novalidate>
@@ -185,7 +187,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow mb-4">
                                     <div class="card-header">
-                                        <strong class="card-title">פרטי משימה</strong>
+                                        <strong class="card-title">צור וערוך משימה</strong>
                                     </div>
                                     <div class="card-body">
                                         <form class="needs-validation" novalidate>

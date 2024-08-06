@@ -3281,7 +3281,7 @@ input[type="button"].btn-block {
   background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid #e9ecef;
-  border-radius: 0.25rem; }
+  border-radius: 15px; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -3319,7 +3319,7 @@ input[type="button"].btn-block {
   background-color: #ffffff;
   border-bottom: 1px solid #e9ecef; }
   .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
+    border-radius: calc(15px) calc(15px) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
     border-top: 0; }
 
@@ -3327,8 +3327,9 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   background-color: #ffffff;
   border-top: 1px solid #e9ecef; }
-  .card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
+    .card-footer:last-child {
+        border-radius: 0 0 calc(15px) calc(15px);
+    }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -8663,11 +8664,13 @@ button:focus {
 
 .searchform {
   position: relative; }
-  .searchform:before {
-    font-family: "feather";
-    content: "\e9cc";
-    position: absolute;
-    left: 0; }
+    .searchform:before {
+        font-family: "feather";
+        content: "\e9cc";
+        position: absolute;
+        left: 0;
+        margin-left: 1.0rem;
+    }
   .searchform.searchform-lg:before {
     left: 1rem;
     top: 0.7rem; }

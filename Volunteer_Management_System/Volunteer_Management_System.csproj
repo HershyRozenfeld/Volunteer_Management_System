@@ -161,6 +161,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="RealAdmin\Activitie.aspx" />
+    <Content Include="RealAdmin\ActivitieList.aspx" />
     <Content Include="RealAdmin\assets\avatars\face-1.jpg" />
     <Content Include="RealAdmin\assets\avatars\face-2.jpg" />
     <Content Include="RealAdmin\assets\avatars\face-3.jpg" />
@@ -223,6 +224,7 @@
     <Content Include="RealAdmin\form_upload.html" />
     <Content Include="RealAdmin\form_validation.html" />
     <Content Include="RealAdmin\form_wizard.html" />
+    <Content Include="RealAdmin\images\harvest.jpeg" />
     <Content Include="RealAdmin\index-boxed.html" />
     <Content Include="RealAdmin\index-horizontal.html" />
     <Content Include="RealAdmin\index-vertical.html" />
@@ -337,6 +339,13 @@
     </Compile>
     <Compile Include="RealAdmin\Activitie.aspx.designer.cs">
       <DependentUpon>Activitie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\ActivitieList.aspx.cs">
+      <DependentUpon>ActivitieList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\ActivitieList.aspx.designer.cs">
+      <DependentUpon>ActivitieList.aspx</DependentUpon>
     </Compile>
     <Compile Include="RealAdmin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
