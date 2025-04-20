@@ -85,7 +85,7 @@ namespace DAL
                     FName = DT.Rows[0]["FName"] + "",
                     LName = DT.Rows[0]["LName"] + "",
                     Email = DT.Rows[0]["Email"] + "",
-                    DateOfBirth = (DateTime)DT.Rows[0]["DateOfBirth"],
+                    DateOfBirth = DateTime.Parse(DT.Rows[0]["DateOfBirth"]+""),
                     Phone = DT.Rows[0]["Phone"] + "",
                     Category = DT.Rows[0]["Category"] + "",
                     City = (int)DT.Rows[0]["City"],
